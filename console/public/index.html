@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arb Console</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="rail">
+      <div class="brand">ARB CONSOLE<small>double-arbitrage</small></div>
+      <nav class="nav" id="nav">
+        <button data-view="providers" class="on">Books <span class="count" id="c-books"></span></button>
+        <button data-view="matches">Matches <span class="count" id="c-matches"></span></button>
+        <button data-view="arbs">Arbs <span class="count" id="c-arbs"></span></button>
+        <button data-view="add">Add book</button>
+      </nav>
+      <div class="rail-foot">
+        <div id="outdir-label"></div>
+      </div>
+    </aside>
+
+    <main>
+      <div id="banner"></div>
+      <div id="view"></div>
+      <div class="spacer-b"></div>
+    </main>
+  </div>
+
+  <section class="drawer collapsed" id="drawer">
+    <div class="drawer-bar" id="drawer-bar">
+      <span class="dot idle" id="drawer-dot"></span>
+      <span id="drawer-status">console idle</span>
+      <span class="spacer"></span>
+      <span id="drawer-hint">click to expand</span>
+    </div>
+    <div class="log" id="log"></div>
+  </section>
+
+  <script src="/app.js"></script>
+</body>
+</html>

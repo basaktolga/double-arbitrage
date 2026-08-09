@@ -1,0 +1,21 @@
+# Python virtualenvs (each scraper has its own)
+myenv/
+__pycache__/
+*.pyc
+
+# Playwright / patchright persistent browser profiles
+.pr-profile/
+.pr-sites
+.pr-books
+
+# Scraped odds data — regenerate with the console, don't version it
+*_odds_*.json
+*_today.json
+json-2file-arbfinder/*.json
+
+# Local state
+console/providers.json
+.DS_Store
+
+# Has its own git repo
+website/

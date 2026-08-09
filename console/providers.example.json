@@ -1,0 +1,80 @@
+{
+  "outputDir": "json-2file-arbfinder",
+  "providers": [
+    {
+      "id": "bwin",
+      "label": "Betwinner",
+      "dir": "bwin-scraper",
+      "python": "myenv/bin/python",
+      "runner": "agent_run.py",
+      "enabled": true,
+      "urls": {
+        "BWIN_BASE": "https://change-me.example"
+      },
+      "note": "Mirror domain rotates often \u2014 update BWIN_BASE when it 404s."
+    },
+    {
+      "id": "bson",
+      "label": "Bets10 (BSON)",
+      "dir": "bson-scraper",
+      "python": "myenv/bin/python",
+      "runner": "agent_run.py",
+      "enabled": true,
+      "urls": {
+        "BSON_BASE": "https://change-me.example",
+        "BSON_API_ORIGIN": "https://change-me.example"
+      },
+      "note": "Both URLs must point at the same mirror."
+    },
+    {
+      "id": "rainbet",
+      "label": "Rainbet",
+      "dir": "rainbet-scraper",
+      "python": "myenv/bin/python",
+      "runner": "agent_run.py",
+      "enabled": true,
+      "urls": {
+        "RAINBET_BASE": "https://change-me.example",
+        "RAINBET_API": "https://change-me.example"
+      },
+      "note": "Cloudflare Turnstile \u2014 uses patchright with a persistent profile."
+    },
+    {
+      "id": "betsolutions",
+      "label": "Dumanbet (BetSolutions)",
+      "dir": "betsolutions-scraper",
+      "python": "../rainbet-scraper/myenv/bin/python",
+      "runner": "main.py",
+      "enabled": true,
+      "urls": {
+        "BETSOLUTIONS_URL": "https://change-me.example",
+        "BETSOLUTIONS_ORIGIN": "https://change-me.example"
+      },
+      "note": "Borrows the rainbet venv; main.py takes the output dir as argv[1]."
+    },
+    {
+      "id": "exonbet",
+      "label": "Exonbet",
+      "dir": "exonbet-scraper",
+      "python": "../rainbet-scraper/myenv/bin/python",
+      "runner": "main.py",
+      "enabled": false,
+      "urls": {
+        "EXONBET_LIST_URL": "https://change-me.example"
+      },
+      "note": "Feed GUID is derived at runtime from the list page."
+    },
+    {
+      "id": "k9win",
+      "label": "K9",
+      "dir": "k9win-scraper",
+      "python": "../rainbet-scraper/myenv/bin/python",
+      "runner": "agent_run.py",
+      "enabled": true,
+      "urls": {
+        "K9WIN_BASE": "https://change-me.example"
+      },
+      "note": "Scaffolded by the console \u2014 implement agent_run.py."
+    }
+  ]
+}

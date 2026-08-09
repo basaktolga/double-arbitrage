@@ -1,0 +1,799 @@
+{
+  "directChildren": [
+    {
+      "tag": "obg-tabs",
+      "classes": "obg-tabs ng-star-inserted",
+      "testId": ""
+    }
+  ],
+  "tabs": {
+    "[test-id*=\"tab\"]": [
+      {
+        "text": "0",
+        "testId": "event.market.tab.4",
+        "role": "",
+        "tagName": "obg-tab-label"
+      },
+      {
+        "text": "All",
+        "testId": "event.market.tab.0",
+        "role": "",
+        "tagName": "obg-tab-label"
+      },
+      {
+        "text": "Popular",
+        "testId": "event.market.tab.2",
+        "role": "",
+        "tagName": "obg-tab-label"
+      },
+      {
+        "text": "Bet Builder",
+        "testId": "event.market.tab.3",
+        "role": "",
+        "tagName": "obg-tab-label"
+      },
+      {
+        "text": "Pre-Built",
+        "testId": "event.market.tab.0",
+        "role": "",
+        "tagName": "obg-tab-label"
+      },
+      {
+        "text": "Goals",
+        "testId": "event.market.tab.0",
+        "role": "",
+        "tagName": "obg-tab-label"
+      },
+      {
+        "text": "Halves",
+        "testId": "event.market.tab.0",
+        "role": "",
+        "tagName": "obg-tab-label"
+      },
+      {
+        "text": "Corners",
+        "testId": "event.market.tab.0",
+        "role": "",
+        "tagName": "obg-tab-label"
+      },
+      {
+        "text": "Cards",
+        "testId": "event.market.tab.0",
+        "role": "",
+        "tagName": "obg-tab-label"
+      },
+      {
+        "text": "Player Goals",
+        "testId": "event.market.tab.0",
+        "role": "",
+        "tagName": "obg-tab-label"
+      },
+      {
+        "text": "Player Stats",
+        "testId": "event.market.tab.0",
+        "role": "",
+        "tagName": "obg-tab-label"
+      },
+      {
+        "text": "Player Specials",
+        "testId": "event.market.tab.0",
+        "role": "",
+        "tagName": "obg-tab-label"
+      },
+      {
+        "text": "Match Stats",
+        "testId": "event.market.tab.0",
+        "role": "",
+        "tagName": "obg-tab-label"
+      },
+      {
+        "text": "Handicaps",
+        "testId": "event.market.tab.0",
+        "role": "",
+        "tagName": "obg-tab-label"
+      },
+      {
+        "text": "Game Props",
+        "testId": "event.market.tab.0",
+        "role": "",
+        "tagName": "obg-tab-label"
+      },
+      {
+        "text": "Scores",
+        "testId": "event.market.tab.0",
+        "role": "",
+        "tagName": "obg-tab-label"
+      },
+      {
+        "text": "Intervals",
+        "testId": "event.market.tab.0",
+        "role": "",
+        "tagName": "obg-tab-label"
+      },
+      {
+        "text": "Full Time",
+        "testId": "sub-tab.football.fulltime",
+        "role": "",
+        "tagName": "obg-tab-label"
+      },
+      {
+        "text": "Full Time",
+        "testId": "tab.sub-tab.football.fulltime",
+        "role": "",
+        "tagName": "div"
+      },
+      {
+        "text": "First Half",
+        "testId": "sub-tab.football.first-half",
+        "role": "",
+        "tagName": "obg-tab-label"
+      }
+    ],
+    "button": [
+      {
+        "text": "",
+        "testId": "scroller-arrow-right",
+        "role": "",
+        "tagName": "button"
+      },
+      {
+        "text": "",
+        "testId": "",
+        "role": "",
+        "tagName": "button"
+      },
+      {
+        "text": "Show all  (34)",
+        "testId": "show-more-less-button",
+        "role": "",
+        "tagName": "button"
+      }
+    ],
+    "a": [
+      {
+        "text": "",
+        "testId": "",
+        "role": "",
+        "tagName": "a"
+      },
+      {
+        "text": "",
+        "testId": "",
+        "role": "",
+        "tagName": "a"
+      },
+      {
+        "text": "",
+        "testId": "",
+        "role": "",
+        "tagName": "a"
+      },
+      {
+        "text": "",
+        "testId": "",
+        "role": "",
+        "tagName": "a"
+      },
+      {
+        "text": "",
+        "testId": "",
+        "role": "",
+        "tagName": "a"
+      },
+      {
+        "text": "",
+        "testId": "",
+        "role": "",
+        "tagName": "a"
+      },
+      {
+        "text": "",
+        "testId": "",
+        "role": "",
+        "tagName": "a"
+      },
+      {
+        "text": "",
+        "testId": "",
+        "role": "",
+        "tagName": "a"
+      },
+      {
+        "text": "",
+        "testId": "",
+        "role": "",
+        "tagName": "a"
+      },
+      {
+        "text": "",
+        "testId": "",
+        "role": "",
+        "tagName": "a"
+      },
+      {
+        "text": "",
+        "testId": "",
+        "role": "",
+        "tagName": "a"
+      },
+      {
+        "text": "",
+        "testId": "",
+        "role": "",
+        "tagName": "a"
+      },
+      {
+        "text": "",
+        "testId": "",
+        "role": "",
+        "tagName": "a"
+      },
+      {
+        "text": "",
+        "testId": "",
+        "role": "",
+        "tagName": "a"
+      },
+      {
+        "text": "",
+        "testId": "",
+        "role": "",
+        "tagName": "a"
+      },
+      {
+        "text": "",
+        "testId": "",
+        "role": "",
+        "tagName": "a"
+      },
+      {
+        "text": "",
+        "testId": "",
+        "role": "",
+        "tagName": "a"
+      },
+      {
+        "text": "",
+        "testId": "",
+        "role": "",
+        "tagName": "a"
+      },
+      {
+        "text": "",
+        "testId": "",
+        "role": "",
+        "tagName": "a"
+      },
+      {
+        "text": "",
+        "testId": "",
+        "role": "",
+        "tagName": "a"
+      }
+    ]
+  },
+  "totalSelections": 54,
+  "groupedSelections": 43,
+  "orphanCount": 11,
+  "orphanSelections": [
+    {
+      "label": "Both Teams to Score + Total Goals 2.5: Yes & Over",
+      "odds": "",
+      "headerText": "Price Boost",
+      "ancestors": [
+        {
+          "tag": "obg-show-more-less",
+          "classes": "obg-show-more-less gen2plus",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-event-price-boost-offers-accordion-content",
+          "testId": "event-page.price-boost-market"
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-content-collapsed-animation",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-content",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-closed",
+          "testId": "accordion.item"
+        },
+        {
+          "tag": "cdk-accordion-item",
+          "classes": "obg-uiuplift-accordion-item obg-uiuplift-accordion-item-variant-neutral",
+          "testId": "obg-uiuplift-accordion-item-f-HUhamdB2tEqf5WgsrT0cng"
+        },
+        {
+          "tag": "obg-uiuplift-accordion-item",
+          "classes": "obg-event-price-boost-offers-accordion ng-star-inserted",
+          "testId": ""
+        },
+        {
+          "tag": "obg-event-price-boost-offers-container",
+          "classes": "obg-event-price-boost-offers gen2plus ng-star-inserted",
+          "testId": "event.price-boost-offers-container"
+        }
+      ]
+    },
+    {
+      "label": "Over 0.5",
+      "odds": "1.05",
+      "headerText": "Full Time",
+      "ancestors": [
+        {
+          "tag": "div",
+          "classes": "obg-m-event-market-submarkets-group-selections ng-star-inserted",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-selections-group obg-selections-group-vertical ng-star-inserted",
+          "testId": ""
+        },
+        {
+          "tag": "obg-tabs",
+          "classes": "obg-m-event-market-submarkets-group-tabs obg-tabs",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-m-event-market-submarkets-group-wrapper",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-content-collapsed-animation",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-content",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-closed",
+          "testId": "accordion.item"
+        },
+        {
+          "tag": "cdk-accordion-item",
+          "classes": "obg-uiuplift-accordion-item obg-uiuplift-accordion-item-variant-neutral",
+          "testId": "obg-uiuplift-accordion-item-MTG2W"
+        }
+      ]
+    },
+    {
+      "label": "Under 0.5",
+      "odds": "11.00",
+      "headerText": "Full Time",
+      "ancestors": [
+        {
+          "tag": "div",
+          "classes": "obg-m-event-market-submarkets-group-selections ng-star-inserted",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-selections-group obg-selections-group-vertical ng-star-inserted",
+          "testId": ""
+        },
+        {
+          "tag": "obg-tabs",
+          "classes": "obg-m-event-market-submarkets-group-tabs obg-tabs",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-m-event-market-submarkets-group-wrapper",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-content-collapsed-animation",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-content",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-closed",
+          "testId": "accordion.item"
+        },
+        {
+          "tag": "cdk-accordion-item",
+          "classes": "obg-uiuplift-accordion-item obg-uiuplift-accordion-item-variant-neutral",
+          "testId": "obg-uiuplift-accordion-item-MTG2W"
+        }
+      ]
+    },
+    {
+      "label": "Over 1.5",
+      "odds": "1.33",
+      "headerText": "Full Time",
+      "ancestors": [
+        {
+          "tag": "div",
+          "classes": "obg-m-event-market-submarkets-group-selections ng-star-inserted",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-selections-group obg-selections-group-vertical ng-star-inserted",
+          "testId": ""
+        },
+        {
+          "tag": "obg-tabs",
+          "classes": "obg-m-event-market-submarkets-group-tabs obg-tabs",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-m-event-market-submarkets-group-wrapper",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-content-collapsed-animation",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-content",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-closed",
+          "testId": "accordion.item"
+        },
+        {
+          "tag": "cdk-accordion-item",
+          "classes": "obg-uiuplift-accordion-item obg-uiuplift-accordion-item-variant-neutral",
+          "testId": "obg-uiuplift-accordion-item-MTG2W"
+        }
+      ]
+    },
+    {
+      "label": "Under 1.5",
+      "odds": "3.45",
+      "headerText": "Full Time",
+      "ancestors": [
+        {
+          "tag": "div",
+          "classes": "obg-m-event-market-submarkets-group-selections ng-star-inserted",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-selections-group obg-selections-group-vertical ng-star-inserted",
+          "testId": ""
+        },
+        {
+          "tag": "obg-tabs",
+          "classes": "obg-m-event-market-submarkets-group-tabs obg-tabs",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-m-event-market-submarkets-group-wrapper",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-content-collapsed-animation",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-content",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-closed",
+          "testId": "accordion.item"
+        },
+        {
+          "tag": "cdk-accordion-item",
+          "classes": "obg-uiuplift-accordion-item obg-uiuplift-accordion-item-variant-neutral",
+          "testId": "obg-uiuplift-accordion-item-MTG2W"
+        }
+      ]
+    },
+    {
+      "label": "Over 3.5",
+      "odds": "3.51",
+      "headerText": "Full Time",
+      "ancestors": [
+        {
+          "tag": "div",
+          "classes": "obg-m-event-market-submarkets-group-selections ng-star-inserted",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-selections-group obg-selections-group-vertical ng-star-inserted",
+          "testId": ""
+        },
+        {
+          "tag": "obg-tabs",
+          "classes": "obg-m-event-market-submarkets-group-tabs obg-tabs",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-m-event-market-submarkets-group-wrapper",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-content-collapsed-animation",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-content",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-closed",
+          "testId": "accordion.item"
+        },
+        {
+          "tag": "cdk-accordion-item",
+          "classes": "obg-uiuplift-accordion-item obg-uiuplift-accordion-item-variant-neutral",
+          "testId": "obg-uiuplift-accordion-item-MTG2W"
+        }
+      ]
+    },
+    {
+      "label": "Under 3.5",
+      "odds": "1.32",
+      "headerText": "Full Time",
+      "ancestors": [
+        {
+          "tag": "div",
+          "classes": "obg-m-event-market-submarkets-group-selections ng-star-inserted",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-selections-group obg-selections-group-vertical ng-star-inserted",
+          "testId": ""
+        },
+        {
+          "tag": "obg-tabs",
+          "classes": "obg-m-event-market-submarkets-group-tabs obg-tabs",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-m-event-market-submarkets-group-wrapper",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-content-collapsed-animation",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-content",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-closed",
+          "testId": "accordion.item"
+        },
+        {
+          "tag": "cdk-accordion-item",
+          "classes": "obg-uiuplift-accordion-item obg-uiuplift-accordion-item-variant-neutral",
+          "testId": "obg-uiuplift-accordion-item-MTG2W"
+        }
+      ]
+    },
+    {
+      "label": "Over 4.5",
+      "odds": "6.69",
+      "headerText": "Full Time",
+      "ancestors": [
+        {
+          "tag": "div",
+          "classes": "obg-m-event-market-submarkets-group-selections ng-star-inserted",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-selections-group obg-selections-group-vertical ng-star-inserted",
+          "testId": ""
+        },
+        {
+          "tag": "obg-tabs",
+          "classes": "obg-m-event-market-submarkets-group-tabs obg-tabs",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-m-event-market-submarkets-group-wrapper",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-content-collapsed-animation",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-content",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-closed",
+          "testId": "accordion.item"
+        },
+        {
+          "tag": "cdk-accordion-item",
+          "classes": "obg-uiuplift-accordion-item obg-uiuplift-accordion-item-variant-neutral",
+          "testId": "obg-uiuplift-accordion-item-MTG2W"
+        }
+      ]
+    },
+    {
+      "label": "Under 4.5",
+      "odds": "1.12",
+      "headerText": "Full Time",
+      "ancestors": [
+        {
+          "tag": "div",
+          "classes": "obg-m-event-market-submarkets-group-selections ng-star-inserted",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-selections-group obg-selections-group-vertical ng-star-inserted",
+          "testId": ""
+        },
+        {
+          "tag": "obg-tabs",
+          "classes": "obg-m-event-market-submarkets-group-tabs obg-tabs",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-m-event-market-submarkets-group-wrapper",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-content-collapsed-animation",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-content",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-closed",
+          "testId": "accordion.item"
+        },
+        {
+          "tag": "cdk-accordion-item",
+          "classes": "obg-uiuplift-accordion-item obg-uiuplift-accordion-item-variant-neutral",
+          "testId": "obg-uiuplift-accordion-item-MTG2W"
+        }
+      ]
+    },
+    {
+      "label": "Over 5.5",
+      "odds": "15.00",
+      "headerText": "Full Time",
+      "ancestors": [
+        {
+          "tag": "div",
+          "classes": "obg-m-event-market-submarkets-group-selections ng-star-inserted",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-selections-group obg-selections-group-vertical ng-star-inserted",
+          "testId": ""
+        },
+        {
+          "tag": "obg-tabs",
+          "classes": "obg-m-event-market-submarkets-group-tabs obg-tabs",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-m-event-market-submarkets-group-wrapper",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-content-collapsed-animation",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-content",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-closed",
+          "testId": "accordion.item"
+        },
+        {
+          "tag": "cdk-accordion-item",
+          "classes": "obg-uiuplift-accordion-item obg-uiuplift-accordion-item-variant-neutral",
+          "testId": "obg-uiuplift-accordion-item-MTG2W"
+        }
+      ]
+    },
+    {
+      "label": "Under 5.5",
+      "odds": "1.02",
+      "headerText": "Full Time",
+      "ancestors": [
+        {
+          "tag": "div",
+          "classes": "obg-m-event-market-submarkets-group-selections ng-star-inserted",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-selections-group obg-selections-group-vertical ng-star-inserted",
+          "testId": ""
+        },
+        {
+          "tag": "obg-tabs",
+          "classes": "obg-m-event-market-submarkets-group-tabs obg-tabs",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-m-event-market-submarkets-group-wrapper",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-content-collapsed-animation",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-content",
+          "testId": ""
+        },
+        {
+          "tag": "div",
+          "classes": "obg-uiuplift-accordion-item-closed",
+          "testId": "accordion.item"
+        },
+        {
+          "tag": "cdk-accordion-item",
+          "classes": "obg-uiuplift-accordion-item obg-uiuplift-accordion-item-variant-neutral",
+          "testId": "obg-uiuplift-accordion-item-MTG2W"
+        }
+      ]
+    }
+  ],
+  "marketGroupCount": 22,
+  "innerHTMLSnippet": "<obg-tabs tabitemsize=\"s\" class=\"obg-tabs ng-star-inserted\"><obg-uiuplift-panel class=\"primary obg-uiuplift-panel-container gen2plus ng-star-inserted\"><div test-id=\"uiuplift-header\" class=\"obg-uiuplift-header\"><div class=\"obg-tabs-header-wrapper ng-star-inserted\"><obg-scroller sbb2bresizeobserver=\"\" class=\"genos-typography-body-regular obg-tabs-content obg-tabs-content-s obg-scroller gen2plus\"><div test-id=\"scroller-container\" sbb2bresizeobserver=\"\" class=\"obg-scroller-container\"><!----><div sbb2bresizeobserver=\"\" test-id=\"scroller-content\" class=\"obg-scroller-content\"><obg-tab-label pincount=\"\" class=\"obg-m-tab-label obg-tab-label gen2plus obg-tab-label-pin-count ng-star-inserted\" test-id=\"event.market.tab.4\"><div class=\"ng-star-inserted\"><div class=\"obg-tab-label-wrapper ng-star-inserted\"><div class=\"obg-tab-label-content\"><i enablecoloredicons=\"\" size=\"m\" class=\"tab-icon obg-icon-inline obg-icon-inline-monochrome obg-icon ng-star-inserted\" test-id=\"icon.ico-pin-gen2\" style=\"mask-image: url(&quot;/cdn/imageapi/sb/bgr/Common/Sportsbook/neutral/image/2025/09/ico.pin-gen2.svg&quot;); font-size: var(--genos-icon-m);\"></i><!----><!----><!----></div><sup class=\"obg-tab-label-event-counter genos-typography-body-tiny ng-star-inserted\">0</sup><!----><!----><!----></div><!----></div><!----><!----><!----><!----><!----></obg-tab-label><obg-tab-label pincount=\"\" class=\"obg-m-tab-label obg-tab-label gen2plus obg-tab-label-pin-count ng-star-inserted\" test-id=\"event.market.tab.0\"><div class=\"ng-star-inserted\"><div class=\"obg-tab-label-wrapper ng-star-inserted\"><div class=\"obg-tab-label-content\"><!----><!----><span class=\"ng-star-inserted\">All</span><!----></div><sup class=\"obg-tab-label-event-counter genos-typography-body-tiny ng-star-inserted\"></sup><!----><!----><!----></div><!----></div><!----><!----><!----><!----><!----></obg-tab-label><obg-tab-label pincount=\"\" class=\"obg-m-tab-label obg-tab-label gen2plus obg-tab-label-pin-count ng-star-inserted active\" test-id=\"event.market.tab.2\"><div class=\"ng-star-inserted\"><div class=\"obg-tab-label-wrapper ng-star-inserted\"><div class=\"obg-tab-label-content\"><!----><!----><span class=\"ng-star-inserted\">Popular</span><!----></div><sup class=\"obg-tab-label-event-counter genos-typography-body-tiny ng-star-inserted\"></sup><!----><!----><!----></div><!----></div><!----><!----><!----><!----><!----></obg-tab-label><obg-tab-label pincount=\"\" class=\"obg-m-tab-label obg-tab-label gen2plus obg-tab-label-pin-count ng-star-inserted\" test-id=\"event.market.tab.3\"><div class=\"ng-star-inserted\"><div class=\"obg-tab-label-wrapper ng-star-inserted\"><div class=\"obg-tab-label-content\"><i enablecoloredicons=\"\" size=\"m\" class=\"tab-icon obg-bet-builder-icon obg-icon-inline obg-icon-inline-monochrome obg-icon ng-star-inserted\" test-id=\"icon.ico-bet-builder\" style=\"mask-image: url(&quot;/cdn/imageapi/sb/bgr/Bets10/Sportsbook/neutral/image/2025/08/ico.bet-builder.svg&quot;); font-size: var(--genos-icon-m);\"></i><!----><!----><span class=\"ng-st"
+}

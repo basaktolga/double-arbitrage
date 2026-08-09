@@ -1,0 +1,602 @@
+[
+  {
+    "url": "https://betwinner-16742.bar/bff-api/config/group/get?groups=b.core,d.core&lang=en",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'-1000': 152, '-1001': 495, '-1002': {'icons': '1.0.946', 'ui': '3.3.523'}, '-1003': {'1': '/genfiles/cms/152-495/desktop/media_asset/8eb2310338a7bd764a95223da049d09c.json', '2': '/genfiles/cms/152-495/desktop/media_asset/55f7746e42490bf6528bd26391da6191.json', '11': '/genfiles/cms/152-495/desktop/media_asset/a9df90af9f58fa0c82862859f7dd0d81.json', '16': '/genfiles/cms/152-495/desktop/media_asset/4136209f484829d76de1cf9f4f7c2134.json', '26': '/genfiles/cms/152-495/desktop/media_asset/26da048f5c"
+  },
+  {
+    "url": "https://betwinner-16742.bar/bff-api/config/group/get?groups=d.customize&lang=en",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'435': False, '437': '', '436': False, '438': True, '439': 'arrow', '494': False, '503': False, '504': True, '506': False, '507': False, '508': ['kh', 'mm', 'kr', 'bd', 'np', 'lk', 'pk', 'ph'], '499': 0, '530': '/information/rules/1', '531': '', '547': ['0'], '553': False, '554': False, '555': False, '556': True, '576': '', '591': 'home', '602': False, '603': False, '604': False, '605': False, '606': False, '607': False, '608': False, '609': False, '624': ['headerGroupLine', 'headerGroupLive', "
+  },
+  {
+    "url": "https://betwinner-16742.bar/seo-module-api/api/public/v1/analytics-counters?project[id]=495&domain[host]=betwinner-16742.bar",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'data': [{'type': 1, 'code': 'G-S6SBTBM9JC'}, {'type': 9, 'code': 'GTM-5JZK2JQ'}]}"
+  },
+  {
+    "url": "https://betwinner-16742.bar/fatman-api/a6f69e4388362d761ee5bb073edb23ae3d9341fb/ab.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "[]"
+  },
+  {
+    "url": "https://betwinner-16742.bar/bff-api/config/group/get?groups=b.other,d.application,d.auth,d.banner,d.betting,d.dicts,d.footer,d.global,d.header,d.information,d.other,d.reg,d.responsible,d.support,d.thirdparty,d.toto,d.white_feature,d.common,d.cyber,d.modules,d.promo,d.host,d.office,d.coupon&lang=en",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'-2000': [], '-2001': [], '-2002': [{'id': 43, 'width': 720, 'height': 248, 'templateName': 'template_1', 'active': True}, {'id': 1691, 'width': 764, 'height': 185, 'templateName': 'template_18', 'active': True}, {'id': 1726, 'width': 764, 'height': 185, 'templateName': 'template_18', 'active': True}], '-2003': [{'id': 371, 'name': 'Crash', 'route': 'crash', 'tagId': 3, 'categories': [159891, 156973]}, {'id': 249, 'name': 'Crystal', 'route': 'crystal', 'tagId': 3, 'categories': [103713, 159891]"
+  },
+  {
+    "url": "https://betwinner-16742.bar/fatman-api/a6f69e4388362d761ee5bb073edb23ae3d9341fb/event.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'ts': 1771510242250133}"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/152-495/desktop/media_asset/076bf3cf5aea17d7c7c369369873c16a.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'meta_favicons_icon': {'main': '/genfiles/cms/152-495/desktop/media_asset/a0e29c855667bcd136dcb863ec73fcc7.png', 'secondary': None}, 'meta_favicons_apple_touch_icon': {'main': '/genfiles/cms/152-495/desktop/media_asset/c2d5abf05bcda26e35fac022899072d8.png', 'secondary': None}, 'meta_favicons_pwa_m': {'main': '/genfiles/cms/152-495/desktop/media_asset/d00172be560498fe1a4e6a87402119c9.png', 'secondary': None}, 'meta_favicons_pwa_l': {'main': '/genfiles/cms/152-495/desktop/media_asset/d4e406a05a1c"
+  },
+  {
+    "url": "https://betwinner-16742.bar/service-api/restcore/api/External/v1/Web/Sports?lng=en&nameEng=true",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_preview": "[{'sportId': 1, 'name': 'Football', 'nameEng': 'Football', 'command': 'Half', 'shortName': 'Football', 'subSports': [], 'isCyber': False, 'isTeamSport': True}, {'sportId': 2, 'name': 'Ice Hockey', 'nameEng': 'Ice Hockey', 'command': 'Period', 'shortName': 'Ice Hockey', 'subSports': [], 'isCyber': False, 'isTeamSport': True}, {'sportId': 3, 'name': 'Basketball', 'nameEng': 'Basketball', 'command': 'Quarter', 'subCommand': 'Half', 'shortName': 'Basketball', 'subSports': [], 'isCyber': False, 'isTe"
+  },
+  {
+    "url": "https://betwinner-16742.bar/fatman-api/a6f69e4388362d761ee5bb073edb23ae3d9341fb/event.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'ts': 1771510242385177}"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/web-app-v2/dictionary2/v3_coupon/en/dictionary_161c2da899ec4696898b58b1be31460b.json",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_preview": "{'coupon_accept_advance_to_place_bet': 'Чтобы провести ставку с введенной суммой, необходимо принять доступный аванс', 'coupon_accept_any_changes': 'Accept any changes', 'coupon_accepted': 'Bet slip {couponId} has been accepted', 'coupon_account_selector_bonus': 'Bonus account', 'coupon_account_selector_main': 'Main account', 'coupon_account_selector_title': 'Select account', 'coupon_action_to_place_bet_one_click': 'To place a one-click bet, set the stake amount and select the market you want by"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/web-app-v2/dictionary2/v3_game/en/dictionary_a33b1788d56305a0bc3f7517734d7ae6.json",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_preview": "{'game_about_event': 'Event info', 'game_baseball_bolls': 'Balls', 'game_baseball_hits': 'hits', 'game_baseball_outs': 'Outs', 'game_baseball_strikes': 'Strikes', 'game_bet_builder': 'Bet Builder', 'game_bet_builder_info': 'Place several bets on the same match in one go using our Bet Builder feature', 'game_bet_builder_info_title': 'What is Bet Builder?', 'game_bets_before_start': 'Pre-match bets', 'game_bets_before_start_game': 'Pre-game betting', 'game_boat_race_water_temperature': 'Water temp"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/web-app-v2/dictionary2/v3_reset_password/en/dictionary_612c6e919ca15d39cc751a619a3952c7.json",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_preview": "{'reset_password_bad_link': 'Incorrect or expired link.', 'reset_password_button_to_main': 'Go to home page', 'reset_password_change': 'Customize', 'reset_password_end_all_sessions': 'End all active sessions on other devices', 'reset_password_generate_password': 'Generate password', 'reset_password_hide_password': 'Hide password', 'reset_password_new_password': 'New password', 'reset_password_redirect_text': 'You will be redirected to the home page in {0} seconds.', 'reset_password_repeat_passwo"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/web-app-v2/dictionary2/v3_marketing_modules/en/dictionary_5a1d8238c34c817d16a0c0f1c566d7e7.json",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_preview": "{'email_subscription_item_1': 'The latest news', 'email_subscription_item_2': 'Promotions and offers', 'email_subscription_item_3': 'The best bonuses', 'email_subscription_label': 'Be in the know about all the latest from {name}', 'email_subscription_later': 'Remind later', 'email_subscription_placeholder_1': 'Enter your email address', 'email_subscription_placeholder_2': 'Your email address', 'email_subscription_subscribe': 'Subscribe', 'email_subscription_success_text': \"Now you don't need to "
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/web-app-v2/dictionary2/v3_statistic_game/en/dictionary_fb5b0dc6d9bad13131a5b5e9c0817bee.json",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_preview": "{'statistic_game_1': 'Aces', 'statistic_game_10': 'Max pts won in a row', 'statistic_game_11': 'Assists', 'statistic_game_12': 'Clearances', 'statistic_game_13': 'Kicks', 'statistic_game_14': 'Inside 50s', 'statistic_game_15': 'Kicking efficiency %', 'statistic_game_16': 'Errors', 'statistic_game_17': 'Shots', 'statistic_game_18': 'Penalties', 'statistic_game_19': 'Goals during powerplay', 'statistic_game_2': '1st serve winning %', 'statistic_game_20': 'Possession %', 'statistic_game_21': '7-met"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/web-app-v2/dictionary2/v3_cyber/en/dictionary_a258af9b3f8ab9f16b8f927924e9d90d.json",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_preview": "{'cyber_actions': 'Events', 'cyber_alerts': 'Notifications', 'cyber_all': 'All', 'cyber_all_champs': 'All leagues', 'cyber_all_disciplines': 'All disciplines', 'cyber_all_games': 'All Games', 'cyber_all_markets': 'All markets', 'cyber_all_transfers': 'All transfers', 'cyber_badge_new': 'new', 'cyber_best_of': 'Best of {number}', 'cyber_bonuses': 'Bonuses', 'cyber_breadcrumb_champ': 'Championship', 'cyber_breadcrumb_discipline': 'Disciplines', 'cyber_breadcrumb_event': 'Event', 'cyber_breadcrumb_"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/web-app-v2/dictionary2/v3_support_call_back/en/dictionary_629b891ca5f910b20389b658ac3fc893.json",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_preview": "{'support': 'Customer Support', 'support_admin_describe_problem': 'Please describe the issue', 'support_admin_request': 'Query for Administrator', 'support_call_abort_call': 'Cancel request', 'support_call_back_cancel_question': 'Are you sure you want to cancel the callback you requested?', 'support_call_back_fill_the_fields': 'fill in your details', 'support_call_back_general_questions': 'general issues', 'support_call_back_history_empty': 'Request history is empty', 'support_call_back_history_"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/152-495/desktop/media_asset/76fb5eed7500daedf4a783fd3df4de6c.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'modals_welcome_human': {'main': '/genfiles/cms/desktop/media_asset/b7dc8517eef5d11faca635792c644f2e.png', 'secondary': '/genfiles/cms/desktop/media_asset/b7dc8517eef5d11faca635792c644f2e.webp'}, 'modals_welcome_bg': {'main': '/genfiles/cms/desktop/media_asset/9e6685a5166caf5915cb0889ef675798.jpg', 'secondary': '/genfiles/cms/desktop/media_asset/9e6685a5166caf5915cb0889ef675798.webp'}, 'modals_welcome_line': {'main': '/genfiles/cms/desktop/media_asset/8772b58d4be032f5bfba786b8685fa1f.png', 'sec"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/152-495/desktop/media_asset/4136209f484829d76de1cf9f4f7c2134.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'errors_page_ball': {'main': '/genfiles/cms/desktop/media_asset/ca7f65f7dcbb491d2b43580376be9fbd.png', 'secondary': '/genfiles/cms/desktop/media_asset/ca7f65f7dcbb491d2b43580376be9fbd.webp'}, 'errors_page_sprite_football_men': {'main': '/genfiles/cms/152-495/desktop/media_asset/844426bbddafd15b0d7bcf5ed4809966.png', 'secondary': '/genfiles/cms/152-495/desktop/media_asset/844426bbddafd15b0d7bcf5ed4809966.webp'}, 'errors_page_gates': {'main': '/genfiles/cms/152-495/desktop/media_asset/e16b4fa9b14"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/152-495/desktop/media_asset/5a1eff67bf0c4b81c66cdb5a90b3f8db.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'widget_consultant_widget_consultant_stub_pic': {'main': '/genfiles/cms/desktop/media_asset/bde615b25e44f91a259a426157c4f5f2.jpg', 'secondary': '/genfiles/cms/desktop/media_asset/bde615b25e44f91a259a426157c4f5f2.webp'}}"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/152-495/desktop/media_asset/037ee45b5a9fe8b161cf63df1581bc5c.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'betting_modal_myanmar_modal_image': {'main': '/genfiles/cms/desktop/media_asset/0cfc7eab59474e14b61b5e4a9fa863f3.png', 'secondary': '/genfiles/cms/desktop/media_asset/0cfc7eab59474e14b61b5e4a9fa863f3.webp'}, 'betting_modal_myanmar_modal_image_2x': {'main': '/genfiles/cms/desktop/media_asset/0a4c7cb2451b9fdb5e3d99468dca8cc6.png', 'secondary': '/genfiles/cms/desktop/media_asset/0a4c7cb2451b9fdb5e3d99468dca8cc6.webp'}, 'betting_modal_myanmar_modal_coin': {'main': '/genfiles/cms/desktop/media_asse"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/152-495/desktop/media_asset/d4b9f7ccc635cecfa7803d9bb8830043.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'partners_main_page_betting_home_showcase_top_events': {'main': '/genfiles/cms/desktop/media_asset/72170d2c7fb9ad315736f3d339870f68.png', 'secondary': '/genfiles/cms/desktop/media_asset/72170d2c7fb9ad315736f3d339870f68.webp'}, 'partners_main_page_betting_home_showcase_top_games_bg': {'main': '/genfiles/cms/desktop/media_asset/9af893dcb9e332c7c46b014517dc336e.png', 'secondary': '/genfiles/cms/desktop/media_asset/9af893dcb9e332c7c46b014517dc336e.webp'}, 'partners_main_page_betting_home_showcase_t"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/web-app-v2/dictionary2/v3_registration/en/dictionary_7bb10e74bc1f4f2d8f88d9b83bc39f9d.json",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_preview": "{'ambassador_banner_description': '“It’s not just love for the game — {br} it’s about keeping the fire alive”', 'ambassador_banner_text': 'Official Melbet Ambassador', 'ambassador_banner_title': 'ANDRÉS INIESTA', 'check_spam_folder': 'If you did not receive the email, please check your Spam folder', 'check_spam_folder_1': 'Click the verification link we sent you via email. This is required to unlock the Welcome Bonus.{br}If not received, check your spam folder', 'custom_registration_description'"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/web-app-v2/dictionary2/v3_express_day/en/dictionary_e65bc58300947bdfae01a8af1c998d07.json",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_preview": "{'express_cyber_day_line': 'eSports Accumulator Of The Day', 'express_cyber_day_line_with_number': 'Esports Accumulator Of The Day No.{num}', 'express_cyber_day_live': 'eSports Live Accumulator Of The Day', 'express_cyber_day_live_with_number': 'Live Esports Accumulator Of The Day No.{num}', 'express_day_bonus': 'Accumulator bonus', 'express_day_bonus_from_company': 'BONUS from {name}', 'express_day_button_text': 'Add to bet slip', 'express_day_button_text_remove': 'Remove from bet slip', 'expre"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/web-app-v2/dictionary2/v3_forgot_password/en/dictionary_9e470ce3c0a8e17e87a4b016f3e3ddfa.json",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_preview": "{'create_new_password': 'Create a new password', 'email_instr1': 'To recover your password, enter the e-mail address you used for registration.', 'email_instr2': 'We will send you an e-mail with further instructions.', 'enter_email': 'Enter your e-mail', 'forgot_password_by_email': 'By email', 'forgot_password_by_phone': 'By phone', 'forgot_password_call_waiting': 'Call pending', 'forgot_password_change_password': 'Password change', 'forgot_password_changed': 'Password changed successfully', 'fo"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/web-app-v2/dictionary2/v3_support_multi_button/en/dictionary_3d29aaa6f8438e86915964733a518572.json",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_preview": "{'support_multi_button_agreement': 'Please confirm that you consent to your personal information being processed and shared with third parties', 'support_multi_button_app': 'Contact us on {app}', 'support_multi_button_app_description': 'Ask any questions via {app}', 'support_multi_button_ask_questions': 'Ask any questions', 'support_multi_button_callback': 'Callback', 'support_multi_button_callback_process': 'Callback requested', 'support_multi_button_callback_process_info': 'Customer Support te"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/152-495/desktop/media_asset/2d9784e57c86143f8cec3dda25913289.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'registration_first_deposit_bg_left_tablet': {'main': '/genfiles/cms/desktop/media_asset/29f7b9da88855c8626b3224a1e4e09ce.svg', 'secondary': None}, 'registration_first_deposit_bg_left': {'main': '/genfiles/cms/desktop/media_asset/8c2da5fd75e1ad069a91fc1eb09389b4.svg', 'secondary': None}, 'registration_first_deposit_bg_right_mobi': {'main': '/genfiles/cms/desktop/media_asset/57d47f781bf0f72864fba478582199ef.svg', 'secondary': None}, 'registration_first_deposit_bg_right_tablet': {'main': '/genfil"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/web-app-v2/dictionary2/v3_home_showcase/en/dictionary_c58c069614b8f884c1715c264afeba22.json",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_preview": "{'gambling_slot_machines_1_desc_1_1': \"There are over 5,000 online casino games at {name} waiting for you to win big. These include slots, table games and card games that you won't find anywhere else. We are always adding to and diversifying our collection.\", 'gambling_slot_machines_1_desc_2': \"We are trusted by our customers and by key regulators. We promote responsible gaming, provide a variety of safety tools, and we're always ready to support our customers to ensure their gaming experience i"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/152-495/desktop/media_asset/8262a25b71ccba890b2f29270c455126.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'header_logo_dark': {'main': '/genfiles/cms/152-495/desktop/media_asset/69b8a1c2c9b61895441382795217a7c8.svg', 'secondary': None}, 'header_logo_light': {'main': '/genfiles/cms/152-495/desktop/media_asset/023b82537b5c5fa4a9cc627e295e7e95.svg', 'secondary': None}, 'header_logo_decor': {'main': '/genfiles/cms/desktop/media_asset/7bc41c81900518f13703e729be3840a4.png', 'secondary': '/genfiles/cms/desktop/media_asset/7bc41c81900518f13703e729be3840a4.webp'}, 'header_logo_snow': {'main': '/genfiles/cms"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/152-495/desktop/media_asset/a63e73a2ea86201cf0b461a97730512b.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'partners_event_holiday_banner_garland_turned_on': {'main': '/genfiles/cms/152-495/desktop/media_asset/7c5c4a86c06c63f560be4f8c54da6155.svg', 'secondary': None}, 'partners_event_holiday_banner_garland_turned_off': {'main': '/genfiles/cms/152-495/desktop/media_asset/161ca7395307f1a45710bcf68914d37d.svg', 'secondary': None}, 'partners_event_holiday_settings_decor': {'main': '/genfiles/cms/152-495/desktop/media_asset/e2de6d43d5f70abeca51b6009faa77a8.svg', 'secondary': None}, 'partners_event_holida"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/152-495/desktop/media_asset/75afccc8b0577983ad54c6beb5354294.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'right_side_rating_of_bookmakers_logo': {'main': '/genfiles/cms/desktop/media_asset/c0b93bc35eabe1055578fd359824657e.png', 'secondary': '/genfiles/cms/desktop/media_asset/c0b93bc35eabe1055578fd359824657e.webp'}}"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/152-495/desktop/media_asset/419b3db828c039fa680973f9c5627f3a.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'marketing_email_subscription_desktop': {'main': '/genfiles/cms/desktop/media_asset/cdce5a9ffabc17421990e27d83412061.svg', 'secondary': None}, 'marketing_email_subscription_mobile': {'main': '/genfiles/cms/desktop/media_asset/fb0eba05508132d457f34c92b823bf0b.svg', 'secondary': None}, 'marketing_email_subscription_desktop_new': {'main': '/genfiles/cms/desktop/media_asset/1d92571b49b21bd5bbae708079bab494.svg', 'secondary': None}}"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/152-495/desktop/media_asset/9f7e2879760d200e1a48ae1da5ad5650.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'betting_common_bonus_widget_present_bg': {'main': '/genfiles/cms/desktop/media_asset/376f093db9c9f1fc81d196312c3c61d8.png', 'secondary': '/genfiles/cms/desktop/media_asset/376f093db9c9f1fc81d196312c3c61d8.webp'}, 'betting_common_bonus_widget_present_small': {'main': '/genfiles/cms/desktop/media_asset/717deb15de299501fc33108f62db277f.svg', 'secondary': None}, 'betting_common_bonus_widget_mail_small': {'main': '/genfiles/cms/desktop/media_asset/f652fcf4594a19f6d665a4e81d5c9dc3.svg', 'secondary':"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/152-495/desktop/media_asset/6dd8146cb9e75de4b2395a24834326e0.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'betting_scoreboard_bg_default': {'main': '/genfiles/cms/desktop/media_asset/711408e03b61adea0195b8b91b9aaceb.jpg', 'secondary': '/genfiles/cms/desktop/media_asset/711408e03b61adea0195b8b91b9aaceb.webp'}, 'betting_scoreboard_bg_americanFootball': {'main': '/genfiles/cms/desktop/media_asset/b63473a49beb02d5859a807ffe88036d.jpg', 'secondary': '/genfiles/cms/desktop/media_asset/b63473a49beb02d5859a807ffe88036d.webp'}, 'betting_scoreboard_bg_australianFootball': {'main': '/genfiles/cms/desktop/medi"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/152-495/desktop/media_asset/bff8ad4ed2a949668f8e66d09a9ccd4d.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'china_mobile_apps_reliability': {'main': '/genfiles/cms/desktop/media_asset/f8b84b8669e8c247eb43f6e8d8a76808.png', 'secondary': '/genfiles/cms/desktop/media_asset/f8b84b8669e8c247eb43f6e8d8a76808.webp'}, 'china_mobile_apps_payments': {'main': '/genfiles/cms/desktop/media_asset/166595c65e3043129751b830f980df32.png', 'secondary': '/genfiles/cms/desktop/media_asset/166595c65e3043129751b830f980df32.webp'}, 'china_mobile_apps_support': {'main': '/genfiles/cms/desktop/media_asset/c06749d8d4c465bb0e5"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/web-app-v2/dictionary2/v3_main/en/dictionary_0e3d68303ff00d8b2d6f5230554448e7.json",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_preview": "{'accepted': 'The {0} must be accepted.', 'accountBlocked': 'Your account is blocked', 'active_url': 'The :attribute field contains an invalid URL.', 'after': 'The :attribute field must contain a date after :date.', 'after_or_equal': 'The :attribute field must contain the date :date or later.', 'all_available_markets': 'All available markets', 'alpha': 'The :attribute field can only contain letters.', 'alpha_dash': 'The :attribute field can only contain letters, numbers, and dashes.', 'alpha_lat"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/web-app-v2/dictionary2/v3_auth/en/dictionary_69b74505b84459562fbeacf59e68b1af.json",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_preview": "{'auth_accept_rules': 'By logging in, you agree to the company T&C', 'auth_account_access_limited': 'Access to your account is restricted', 'auth_account_blocked': 'Account blocked', 'auth_account_blocked_description': 'You have enabled the self-exclusion feature. To restore access to your account, please contact the {link}customer support team{/link}', 'auth_allow': 'Allow', 'auth_appeal_block': 'Appeal account block', 'auth_authorize': 'log in', 'auth_by_code': 'By code', 'auth_by_email': 'By "
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/web-app-v2/dictionary2/v3_widget_consultant/en/dictionary_6b31b5b853a08b2d20e8ce741cbb5eec.json",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_preview": "{'widget_consultant_info': 'The customer support chat will soon become available. We apologize for any inconvenience caused.', 'widget_consultant_support': 'Customer support chat', 'widget_consultant_work': 'Maintenance work in progress'}"
+  },
+  {
+    "url": "https://betwinner-16742.bar/service-api/gamespreview/getbanner?whence=55&ref=152&gr=495&lng=en&fCountry=190",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_preview": "{'GT': 85, 'GN': 'Money Wheel', 'DS': 'Place a bet and spin the wheel. Just imagine your winnings when the arrow lands on x1,000!', 'HD': 'Luck is on your side!', 'R': 'money-wheel', 'OR': 'moneywheel'}"
+  },
+  {
+    "url": "https://betwinner-16742.bar/sys-welcome-app-front/en/topgame/line/football/118593-uefa-europa-league/300956136-brann-bologna-1909",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'appName': '__WELCOME_APP__', 'body': '<div id=\"__WELCOME_APP__\"></div><div id=\"teleports\"></div>', 'style': [], 'cssToLoad': [{'href': '/sys-static/sys-welcome-app-static/Desktop/BetWinner/5270178323.css'}, {'href': '/sys-static/shared-assets/Desktop/__shared_css_542ed6.css'}, {'href': '/sys-static/shared-assets/Desktop/__shared_bcf9069007.css'}], 'codeToEval': 'window.__WELCOME_APP__=(function(a,b){return {serverRendered:b,config:{public:{nuxtAppName:\"__WELCOME_APP__\",devCdnURL:a,disableOldBF"
+  },
+  {
+    "url": "https://betwinner-16742.bar/sys-office-app-front/en/topgame/line/football/118593-uefa-europa-league/300956136-brann-bologna-1909",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'appName': '__OFFICE_APP__', 'body': '<div id=\"__OFFICE_APP__\"></div><div id=\"teleports\"></div>', 'style': [], 'cssToLoad': [{'href': '/sys-static/shared-assets/Desktop/__shared_css_542ed6.css'}, {'href': '/sys-static/shared-assets/Desktop/__shared_bcf9069007.css'}], 'codeToEval': 'window.__OFFICE_APP__=(function(a,b,c){return {serverRendered:b,config:{public:{nuxtAppName:\"__OFFICE_APP__\",devCdnURL:a,disableOldBFFConfig:c,device:{enabled:c,defaultUserAgent:a,refreshOnResize:b}},app:{baseURL:\"\\\\"
+  },
+  {
+    "url": "https://betwinner-16742.bar/web-api/api/third-party/banner-for-header",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'data': {'id': 849, 'name': 'Spribe Aviator', 'gameUrl': '/othergames?product=49', 'icon': 'slots_games_aviator_desktop', 'sectionId': 67, 'gameId': 68089, 'analytics': None, 'isVisibleInNav': True, 'isItemInCasinoSection': False}}"
+  },
+  {
+    "url": "https://betwinner-16742.bar/bff-api/event-logo/v2/suitable.json?lang=en",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "[]"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/152-495/desktop/media_asset/e14fc3cf4c88e002e892a8a4cf065d43.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'slots_games_aviator': {'main': '/genfiles/cms/desktop/media_asset/6c83a6aa3f575eebd0a3c285c2c6c2b4.svg', 'secondary': None}, 'slots_games_aviator_s': {'main': '/genfiles/cms/desktop/media_asset/41b7de60485f714e8cb13498d125f732.svg', 'secondary': None}, 'slots_games_stand_bg': {'main': '/genfiles/cms/desktop/media_asset/996ecd20c536c22aed513dda49229aa9.jpg', 'secondary': '/genfiles/cms/desktop/media_asset/996ecd20c536c22aed513dda49229aa9.webp'}, 'slots_games_gigabash_bg': {'main': '/genfiles/cm"
+  },
+  {
+    "url": "https://betwinner-16742.bar/paysystems/information/systems?ref_id=152&geo=TR&lang=en",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'deposits': [{'code': 'webmoney', 'name': 'WebMoney', 'type': 'e_wallet', 'inout': 0, 'min_in': '50 RUB', 'max_in': '14999 RUB', 'min_out': '100 RUB', 'max_out': '14999 RUB', 'icon': '/paysystems/xpay/images/money/webmoney.png'}, {'code': 'ecopayz', 'name': 'ecoPayz', 'type': 'e_wallet', 'inout': 0, 'min_in': '923.62 RUB', 'max_in': None, 'min_out': '886.89 RUB', 'max_out': '89445 RUB', 'icon': '/paysystems/xpay/images/money/ecopayz.png'}, {'code': 'papara', 'name': 'Papara', 'type': 'pay_syste"
+  },
+  {
+    "url": "https://betwinner-16742.bar/web-api/api/v3/bonuses/welcome-bonuses",
+    "status": 200,
+    "content_type": "application/vnd.api+json",
+    "body_preview": "{'data': [{'type': 'register-bonus', 'id': '0', 'attributes': {'id': 0, 'title': 'Bonus for sports', 'bonusCode': 'SPORT', 'description': '200% first deposit bonus up to 5500TRY', 'isSelected': False, 'currency_code': 'TRY', 'percent': 200, 'max_bonus': 5500, 'min_deposit': 30, 'currency_symbol': '₺'}}, {'type': 'register-bonus', 'id': '1', 'attributes': {'id': 1, 'title': 'Casino + Win Games', 'bonusCode': 'CASINO', 'description': 'Welcome package up to 45000 TRY + 150 FS', 'isSelected': False,"
+  },
+  {
+    "url": "https://betwinner-16742.bar/bff-api/config/group/get?groups=d.bringfriend&lang=en",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'214': 0, '215': 'office_partner_title', '217': 'office_partner_subtitle', '218': False, '219': ['twitter', 'vk', 'ok', 'fb'], '220': 'header_partner_program'}"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/152-495/desktop/media_asset/624501fb4cc3db799f74ab384dc64421.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'promotions_firstDeposit_arrow': {'main': '/genfiles/cms/desktop/media_asset/974d069edeab44dd0d39630ffe4fe528.svg', 'secondary': None}, 'promotions_firstDeposit_dots': {'main': '/genfiles/cms/desktop/media_asset/5ddb05f18f297ab2e326c5b61ce9da31.png', 'secondary': '/genfiles/cms/desktop/media_asset/5ddb05f18f297ab2e326c5b61ce9da31.webp'}, 'promotions_firstDeposit_girl': {'main': '/genfiles/cms/desktop/media_asset/735af62df8396dd746f00a809ac73293.png', 'secondary': '/genfiles/cms/desktop/media_as"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/152-495/desktop/media_asset/db32c9ead66a25c8b69fff8b1df75dc4.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'promo_bonus_rules_section_promocode_showcase': {'main': '/genfiles/cms/desktop/media_asset/40aae1e341c189f17c79bdd2242c05e7.png', 'secondary': '/genfiles/cms/desktop/media_asset/40aae1e341c189f17c79bdd2242c05e7.webp'}, 'promo_bonus_rules_section_games': {'main': '/genfiles/cms/desktop/media_asset/834bfd303925940398b983cbf82bb488.png', 'secondary': '/genfiles/cms/desktop/media_asset/834bfd303925940398b983cbf82bb488.webp'}, 'promo_bonus_rules_section_promocode_showcase_2x': {'main': '/genfiles/c"
+  },
+  {
+    "url": "https://betwinner-16742.bar/bff-api/config/all.json?lang=en",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'versioning': {'icons': '1.0.946', 'ui': '3.3.523'}, 'mainLanguage': {'id': 'en', 'title': 'English', 'code': 'en', 'locale': 'en_GB'}, 'globalConfig': {'domain': 'betwinner.com', 'name': 'BetWinner', 'brand_name': 'BetWinner', 'show_symbol_currency_before': None, 'show_banner_widget': True, 'home_page_type': 0, 'manual_country_code': False, 'show_btn_scroll_to_top': False, 'security_skype': 'security@betwinner.com', 'show_new_site_info_popup': False, 'is_device_lng_first': False, 'langs_hidden"
+  },
+  {
+    "url": "https://betwinner-16742.bar/bff-api/config/group/get?groups=d.boolean&lang=en",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'850': False, '851': False, '891': True, '894': False, '901': False, '926': False, '963': False, '981': False, '999': True, '1039': False, '1278': False, '1314': True, '1342': True, '1343': True}"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/web-app-v2/dictionary2/v3_favorites/en/dictionary_f7df10d240c206336fa80746c33e2f96.json",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_preview": "{'favorites_empty_list_caption': \"You haven't added any games to your favourites yet\", 'favorites_empty_list_title': 'No favorite games', 'favorites_refresh': 'Refresh'}"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/web-app-v2/dictionary2/v3_top_events/en/dictionary_3f6e381c2df15747a7941208fcde8526.json",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_preview": "{'top_events_action': 'Promotion', 'top_events_add_reaction': 'Add reaction', 'top_events_after_tomorrow': 'Day after tomorrow', 'top_events_all_markets': 'All markets', 'top_events_all_teams_selected': 'All teams selected', 'top_events_arena': 'Arena', 'top_events_assists': 'Assists', 'top_events_awaiting_results': 'Tournament results will appear here soon', 'top_events_balls': 'Balls', 'top_events_banner_tournament_finished': 'Tournament finished', 'top_events_banner_winner': 'Winner', 'top_ev"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/152-495/desktop/media_asset/3e467f574dea21a4a34ec3ffccf372eb.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'partners_event_ticker_text': {'main': '/genfiles/cms/desktop/media_asset/25c2c794b6883ab9c664f001a967954a.png', 'secondary': '/genfiles/cms/desktop/media_asset/25c2c794b6883ab9c664f001a967954a.webp'}, 'partners_event_ticker_logo': {'main': '/genfiles/cms/desktop/media_asset/3957e9eb141e0bbba395d7fb82a415de.png', 'secondary': '/genfiles/cms/desktop/media_asset/3957e9eb141e0bbba395d7fb82a415de.webp'}, 'partners_event_ticker_separator': {'main': '/genfiles/cms/desktop/media_asset/39e1e41d8c269b25"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/152-495/desktop/media_asset/f776eef6a9133c3c905556a01885fcdf.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'betting_banners_banner_one': {'main': '/genfiles/cms/desktop/media_asset/3e79374003eafa5db3a1b44942fb2488.jpg', 'secondary': '/genfiles/cms/desktop/media_asset/3e79374003eafa5db3a1b44942fb2488.webp'}, 'betting_banners_banner_three': {'main': '/genfiles/cms/desktop/media_asset/bae611d849b06c1ffa9a6bd134fac201.jpg', 'secondary': '/genfiles/cms/desktop/media_asset/bae611d849b06c1ffa9a6bd134fac201.webp'}, 'betting_banners_banner_two': {'main': '/genfiles/cms/desktop/media_asset/b6fd7c6763e1468f107"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/152-495/desktop/media_asset/804e9d42a4095272f5a3771c3d383cff.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'notifications_error_1x': {'main': '/genfiles/cms/desktop/media_asset/fc1a4c1d14c427d2e6540f3ed3c58e61.png', 'secondary': '/genfiles/cms/desktop/media_asset/fc1a4c1d14c427d2e6540f3ed3c58e61.webp'}, 'notifications_error_2x': {'main': '/genfiles/cms/desktop/media_asset/bb41d2665e969af139976e7584433314.png', 'secondary': '/genfiles/cms/desktop/media_asset/bb41d2665e969af139976e7584433314.webp'}, 'notifications_info_1x': {'main': '/genfiles/cms/desktop/media_asset/b072a02085c8a2030550993dc8c724b4.p"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/152-495/desktop/media_asset/b39a78388b22e707d0a33ce51bd6ef7d.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'top_events_info_logo': {'main': '/genfiles/cms/desktop/media_asset/caa5b126a70f271b7a95771a135684b2.png', 'secondary': '/genfiles/cms/desktop/media_asset/caa5b126a70f271b7a95771a135684b2.webp'}, 'top_events_info_cup': {'main': '/genfiles/cms/desktop/media_asset/7f95f19fe5cd4e07486478eae4987f64.png', 'secondary': '/genfiles/cms/desktop/media_asset/7f95f19fe5cd4e07486478eae4987f64.webp'}, 'top_events_info_decor': {'main': '/genfiles/cms/desktop/media_asset/125ef42cf555fae0772be1b8447e2af3.png', "
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/web-app-v2/dictionary2/v3_header/en/dictionary_307cf1b0d5e434a97cce3837b01300ea.json",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_preview": "{'header_bonus_special_offer': 'Special offer', 'header_dictionary_earn_with_us': 'Earn with us', 'header_dictionary_hot_games': 'Hot games', 'header_group_bonuses': 'BONUSES', 'header_group_casino': 'Casino', 'header_group_casino_brand': '1XLIVE', 'header_group_clubs_partners': 'Partners', 'header_group_cricket': 'Cricket', 'header_group_esports': 'Esports', 'header_group_esports_v2': 'E-sports', 'header_group_extra': 'Extra', 'header_group_fast_games': 'Fast Games', 'header_group_fifa_wc': 'FI"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/152-495/desktop/media_asset/d5cbe9cf0029187be3d536e004c09f7d.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'betting_high_ranking_tournaments_plug_confetti': {'main': '/genfiles/cms/152-495/desktop/media_asset/53ac8ee9fdffc7bc02371281cc0c226d.png', 'secondary': '/genfiles/cms/152-495/desktop/media_asset/53ac8ee9fdffc7bc02371281cc0c226d.webp'}, 'betting_high_ranking_tournaments_plug_confetti_2x': {'main': '/genfiles/cms/152-495/desktop/media_asset/f9fe6b53a6ed1705c8e8f6c971a850a2.png', 'secondary': '/genfiles/cms/152-495/desktop/media_asset/f9fe6b53a6ed1705c8e8f6c971a850a2.webp'}, 'betting_high_rankin"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/152-495/desktop/media_asset/37347bc6b6e05b1a92323d296c96d144.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'alphabet_bet_now': {'main': '/genfiles/cms/desktop/media_asset/c58433c87bfc131fdb21284be27a9f28.png', 'secondary': '/genfiles/cms/desktop/media_asset/c58433c87bfc131fdb21284be27a9f28.webp'}, 'alphabet_name_banner': {'main': '/genfiles/cms/desktop/media_asset/5e93ef3a7fac8581de882230ea83870a.png', 'secondary': '/genfiles/cms/desktop/media_asset/5e93ef3a7fac8581de882230ea83870a.webp'}, 'alphabet_banner_terms': {'main': '/genfiles/cms/desktop/media_asset/1a9c69c2508b25c50ff122d7de5add0b.png', 'se"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/152-495/desktop/media_asset/427e875751ad311ce351adef944a399d.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'betting_notifications_markets_highlight': {'main': '/genfiles/cms/152-495/desktop/media_asset/68f9d13a4b8c63330101756b510db46c.png', 'secondary': '/genfiles/cms/152-495/desktop/media_asset/68f9d13a4b8c63330101756b510db46c.webp'}, 'betting_notifications_markets_highlight_2x': {'main': '/genfiles/cms/desktop/media_asset/86ca8f4c327a56fd0a465d9498b176bd.png', 'secondary': '/genfiles/cms/desktop/media_asset/86ca8f4c327a56fd0a465d9498b176bd.webp'}}"
+  },
+  {
+    "url": "https://widget.suphelper.xyz/api/env",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_preview": "{'APP_ENV': 'production', 'NEXT_PUBLIC_WIDGET_SERVICE_URL': '/services/widget/v2', 'CI_COMMIT_SHORT_SHA': '372d7ff1', 'PROJECT_NAME': 'webx.consultant.widget.v2', 'NEXT_PUBLIC_CONTROLLER_PROXY_LOGGER': '/restapi/_l', 'NEXT_PUBLIC_LOGSTASH_LOGGER_ENABLED': 'true', 'NEXT_PUBLIC_PROXY_LOGGER_ENABLED': 'false', 'NEXT_PUBLIC_LOGSTASH_URL': '/webmodule', 'NEXT_PUBLIC_SENTRY_PROXY_URI': '/sentry'}"
+  },
+  {
+    "url": "https://widget.suphelper.xyz/api/country",
+    "status": 200,
+    "content_type": "",
+    "body_preview": "(could not parse JSON)"
+  },
+  {
+    "url": "https://betwinner-16742.bar/hd-api/external/verify",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'token': 'nwU6li5XFwtKURiGMz0/zyzIPo1K/jkLDTnFLdXKs7+8YRuu2R48+ocFCBP1MHm1FAqW00YfrQqWAsqnaayI6gnsQAdNvOON3Et2qV4iRfNdm2L3aUJeSXhCovBA5/k7ummsWEy6qbo7e0j4u5qOC6cPjlqx3M40xAqO1spmKv2alJREFP74ydORLv4Wp0QpQyTIqGYuXSoONFSHSzNMgJ40Vs4fvvqt7jOUZAvLWV50RNuA+e2piRG2OLepV4IipnLv0qOY+FrQOQ9V5X21yUZWDWfE959rscBcTE1TiQ6as37vm2enYyjsIr+vhLl3xX6HV++Vki1iKVv9CvK7k/LQM+HYyykdVMM8XP871C68b2W5iYvQ0zaq6dPN55uSRIYuM5Vi+XF2XXw0Asz1hngVPWQSCZXEv1B7c+uMkpzMG50cBG4DFVyxi5NIzTsBNK2zH0RnwbeTSQuCXKIQdN9/MEbEFO/ArhBBDkLO/"
+  },
+  {
+    "url": "https://betwinner-16742.bar/service-api/SubscriptionService/api/GetEventTypesByGameId?gameId=691427746&Source=1",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_preview": "{'Sport': 1, 'EventsByPeriodType': [{'TypePeriod': {'key': 0, 'value': 'Instant notifications'}, 'TypesEvent': [{'Key': 0, 'Value': 'Score'}, {'Key': 2, 'Value': 'Corners'}, {'Key': 1, 'Value': 'Yellow cards'}]}, {'TypePeriod': {'key': 2, 'value': 'Match details'}, 'TypesEvent': [{'Key': 0, 'Value': 'Score'}, {'Key': 2, 'Value': 'Corners'}, {'Key': 1, 'Value': 'Yellow cards'}]}]}"
+  },
+  {
+    "url": "https://betwinner-16742.bar/champs-api/v1/get-champs-by-params-web",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_preview": "{'data': {'response': []}}"
+  },
+  {
+    "url": "https://betwinner-16742.bar/service-api/LineFeed/GameInsights?id=691427746&partner=152&gr=495&country=190&lng=en",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_preview": "{'Error': '', 'ErrorCode': 0, 'Guid': '', 'Id': 0, 'Success': True, 'Value': [{'I': 691427746, 'LGI': [{'EV': [{'C': 2.056, 'CV': '2.056', 'G': 17, 'P': 2.5, 'T': 9}, {'C': 1.768, 'CV': '1.768', 'G': 17, 'P': 2.5, 'T': 10}], 'I': \"There have been 3 or more goals scored in total in each of Bologna 1909's last 4 away games\"}, {'EV': [{'C': 3.1, 'CV': '3.1', 'G': 18, 'T': 188}, {'C': 3.46, 'CV': '3.46', 'G': 18, 'T': 189}, {'C': 2.12, 'CV': '2.12', 'G': 18, 'T': 190}], 'I': \"There have been more go"
+  },
+  {
+    "url": "https://betwinner-16742.bar/bff-api/config/video.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'blockedChampIds': [127733, 1673512, 1670765, 13589, 12645, 1678675, 1795600, 1828073, 1747051, 1474029, 1556179, 1684280, 1690112, 1562855, 1700637, 820249, 191699, 584231, 1119373, 1506623, 1644625, 1510799, 312249, 1849497, 1707336, 1707335, 1684339, 1685014, 1563429, 1469323, 1762066, 1867010, 1768855, 119427, 240273, 1498231, 1751677, 893529, 198495, 1296423, 1796501, 119235, 1705590, 126813, 126679, 119243, 1501879, 206425, 194867, 127759, 119719, 202303, 1364513, 1565705, 156939, 120819,"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/betstemplates/bets_model_map_short_en.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'1': [4, 50], '2': [51, 95], '3': [96, 176], '4': [178, 339], '5': [341, 725], '6': [731, 815], '7': [816, 868], '8': [870, 887], '9': [897, 969], '10': [970, 1066], '11': [1068, 1168], '12': [1170, 2320], '13': [2322, 2432], '14': [2434, 2502], '15': [2504, 2616], '16': [2643, 2736], '17': [2738, 2839], '18': [2841, 2951], '19': [2953, 3043], '20': [3045, 3141], '21': [3143, 3261], '22': [3263, 3361], '23': [3363, 3501], '24': [3503, 6631], '25': [6632, 6807], '26': [6809, 6965], '27': [6967, "
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/betstemplates/bets_model_short_en_0.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'0': {'1': {'M': {'1': {'N': 'W1', 'T': 1, 'G': 1}, '2': {'N': 'X', 'T': 1, 'G': 1}, '3': {'N': 'W2', 'T': 1, 'G': 1}, '6352': {'N': 'X After Time Expires', 'T': 1, 'G': 1}, '13721': {'N': '[] - W1', 'T': 7, 'G': 1}, '13722': {'N': '[] - W2', 'T': 7, 'G': 1}}, 'N': '1X2', 'C': 3, 'GN': {'1': '1X2'}}, '8': {'M': {'4': {'N': '1X', 'T': 1, 'G': 2}, '5': {'N': '12', 'T': 1, 'G': 2}, '6': {'N': '2X', 'T': 1, 'G': 2}}, 'N': 'Double Chance', 'C': 3, 'GN': {'2': 'Double Chance'}}, '2': {'M': {'7': {'N'"
+  },
+  {
+    "url": "https://betwinner-16742.bar/account-api/registration/form/web/widget",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'id': 1546, 'layout': 'widget', 'uiCustomizationConfig': {'stylePreset': None}, 'additionalConfig': {'isAllowEditLoginAfterReg': False, 'firstDepositData': {'widgetText': '200% FIRST DEPOSIT BONUS', 'bonusAmount': '5500 TRY'}}, 'banners': None, 'dictionaries': {'countries': [{'id': 190, 'name': 'Turkey', 'phoneCode': '+90', 'alpha2': 'TR', 'aliases': [], 'currencyId': 20}, {'id': 3, 'name': 'Abkhazia', 'phoneCode': '+7', 'alpha2': 'AB', 'aliases': [], 'currencyId': 1}, {'id': 17, 'name': 'Afgha"
+  },
+  {
+    "url": "https://betwinner-16742.bar/sys-platform-apps-front/en/topgame/line/football/118593-uefa-europa-league/300956136-brann-bologna-1909",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'appName': '__PLATFORM_APPS__', 'body': '<div id=\"__PLATFORM_APPS__\"></div><div id=\"teleports\"></div>', 'style': [], 'cssToLoad': [{'href': '/sys-static/sys-platform-apps-static/Desktop/BetWinner/5a0233ab3d.css'}, {'href': '/sys-static/shared-assets/Desktop/__shared_css_542ed6.css'}, {'href': '/sys-static/shared-assets/Desktop/__shared_bcf9069007.css'}], 'codeToEval': 'window.__PLATFORM_APPS__=(function(a,b,c){return {serverRendered:b,config:{public:{nuxtAppName:\"__PLATFORM_APPS__\",devCdnURL:a,"
+  },
+  {
+    "url": "https://betwinner-16742.bar/champs-api/v1/get-champs-by-params-web",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_preview": "{'data': {'response': []}}"
+  },
+  {
+    "url": "https://betwinner-16742.bar/web-api/api/v3/bonuses/first-deposit",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'success': True, 'data': {'hasFirstDeposit': True, 'percentFirstDeposit': '200%', 'bonusAmount': '5500 TRY', 'amountFirstDeposit': '30 TRY', 'currencyFirstDeposit': 'TRY', 'bonusButtonTooltip': None, 'bonusDropdownDescription': None, 'bonusPopupTitle': '200% bonus on your 1st deposit', 'bonusPopupDescription': 'Deposit up to 5500 TRY (or equivalent in another currency) and receive the same amount as a gift.', 'bonusPopupBtnText': 'Get bonus'}}"
+  },
+  {
+    "url": "https://betwinner-16742.bar/service-api/main-live-feed/v1/expressDay?cfView=3&country=190&gr=495&lng=en&ref=152",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_preview": "[{'expressId': 10451, 'cf': 5.962, 'cfView': '5.962', 'events': [{'sport': {'timeName': 'Half', 'timesName': 'Halves', 'id': 1, 'name': 'Football'}, 'liga': {'countryImage': '/sfiles/logo-flag/a09c04e45bfb1f2440d5185d9c5753ec.png', 'image': '/sfiles/logo-champ/1423b200977b9c21e26c660a4c4a0bb9.png', 'id': 2959788, 'name': 'Friendlies. Russian clubs'}, 'opponent1': {'fullName': 'Torpedo Vladimir', 'countryId': 1, 'opps': [{'id': 22105, 'name': 'Torpedo Vladimir', 'image': 'a898027f15eac9e429561c0a"
+  },
+  {
+    "url": "https://betwinner-16742.bar/service-api/statisticfeed/api/v1/Game/h2h?id=691427746&lng=en&ref=152&fcountry=190&gr=495",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_preview": "{'teams': [{'id': '5ab13270494765f3ca2570f6', 'countryId': '190', 'title': 'Fenerbahce', 'subTeams': [{'title': 'Fenerbahce', 'image': '/sfiles/logo_teams/49c1706b5eb8599665cc896a08365d65.png'}], 'teamType': 1, 'clId': 5020, 'image': '/sfiles/logo_teams/49c1706b5eb8599665cc896a08365d65.png', 'country': {'id': 190, 'title': 'Turkey', 'logoId': 25965, 'image': '/sfiles/logo_teams/3ee6545f62ec6f346543872b9cf7eba4.png'}}, {'id': '5ab278c3494765f3ca34b156', 'countryId': '137', 'title': 'Kristiansund "
+  },
+  {
+    "url": "https://betwinner-16742.bar/sys-icons/1.0.946/495/sports.svg",
+    "status": 200,
+    "content_type": "image/svg+xml",
+    "body_preview": "(could not parse JSON)"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/betstemplates/bets_model_short_en_74.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'74': {'11408': {'M': {'1973': {'N': 'Race To () - W1', 'T': 3, 'G': 96}, '1974': {'N': 'Race To () - W2', 'T': 3, 'G': 96}, '1975': {'N': 'Race To () - Neither', 'T': 3, 'G': 96}}, 'N': 'Race To N Runs', 'C': 1, 'GN': {'96': 'Race To N Runs'}}, '11405': {'M': {'1540': {'N': '() Over', 'T': 3, 'G': 384}, '1541': {'N': '() Under', 'T': 3, 'G': 384}}, 'N': 'Team 1 Total Hits', 'C': 1, 'GN': {'384': 'Team 1 Total Hits'}}, '11406': {'M': {'1542': {'N': '() Over', 'T': 3, 'G': 385}, '1543': {'N': '("
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/betstemplates/bets_model_short_en_37.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'37': {'8379': {'M': {'7721': {'N': '1 To Lead After Hole ()', 'T': 3, 'G': 2451}, '7722': {'N': '2 To Lead After Hole ()', 'T': 3, 'G': 2451}, '7723': {'N': 'Draw After Hole ()', 'T': 3, 'G': 2451}}, 'N': 'Leader After Hole', 'C': 1, 'GN': {'2451': 'Leader After Hole'}}, '8381': {'M': {'7724': {'N': '() - Touchdown', 'T': 3, 'G': 2452}, '7725': {'N': '() - Goal', 'T': 3, 'G': 2452}, '7726': {'N': '() - Any Other', 'T': 3, 'G': 2452}, '7744': {'N': '() - Field Goal', 'T': 3, 'G': 2452}}, 'N': '"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/betstemplates/bets_model_short_en_3.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'3': {'136': {'M': {'731': {'N': '()-()', 'T': 5, 'G': 33}, '1757': {'N': '1 Will Score () Or Fewer', 'T': 3, 'G': 33}, '1758': {'N': '2 Will Score () Or Fewer', 'T': 3, 'G': 33}, '1759': {'N': '1 Wins After ()', 'T': 3, 'G': 33}, '1760': {'N': '2 Wins After ()', 'T': 3, 'G': 33}, '2060': {'N': '()-() Or Better 1', 'T': 5, 'G': 33}, '2063': {'N': '()-() Or Better 2', 'T': 5, 'G': 33}, '3044': {'N': '()-() - Yes', 'T': 5, 'G': 33}, '3045': {'N': '()-() - No', 'T': 5, 'G': 33}, '3506': {'N': 'Any"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/betstemplates/bets_model_short_en_72.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'72': {'11166': {'M': {'15669': {'N': 'Over () Total Higher Than Over () Total', 'T': 5, 'G': 5131}, '15670': {'N': 'Over () Total Lower Than Over () Total', 'T': 5, 'G': 5131}, '15671': {'N': 'Over () Total Equal To Over () Total', 'T': 5, 'G': 5131}}, 'N': 'Team 1, Totals in Overs, Comparison', 'C': 1, 'GN': {'5131': 'Team 1, Totals in Overs, Comparison'}}, '11167': {'M': {'15672': {'N': 'Over () Total Higher Than Over () Total', 'T': 5, 'G': 5132}, '15673': {'N': 'Over () Total Lower Than Ov"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/betstemplates/bets_model_short_en_40.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'40': {'8823': {'M': {'8555': {'N': '[]', 'T': 7, 'G': 2689}, '8556': {'N': '[] - Yes', 'T': 7, 'G': 2689}, '8557': {'N': '[] - No', 'T': 7, 'G': 2689}}, 'N': 'Costa Rica, Top Goalscorer In The Tournament', 'C': 1, 'GN': {'2689': 'Costa Rica, Top Goalscorer In The Tournament'}}, '8825': {'M': {'8558': {'N': '[]', 'T': 7, 'G': 2690}, '8559': {'N': '[] - Yes', 'T': 7, 'G': 2690}, '8560': {'N': '[] - No', 'T': 7, 'G': 2690}}, 'N': 'Nigeria, Top Goalscorer In The Tournament', 'C': 1, 'GN': {'2690':"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/betstemplates/bets_model_short_en_1.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'1': {'11': {'M': {'15': {'N': 'W1/W1', 'T': 1, 'G': 7}, '16': {'N': 'W1/X', 'T': 1, 'G': 7}, '17': {'N': 'W1/W2', 'T': 1, 'G': 7}, '18': {'N': 'X/W1', 'T': 1, 'G': 7}, '19': {'N': 'X/X', 'T': 1, 'G': 7}, '20': {'N': 'X/W2', 'T': 1, 'G': 7}, '21': {'N': 'W2/W1', 'T': 1, 'G': 7}, '22': {'N': 'W2/X', 'T': 1, 'G': 7}, '23': {'N': 'W2/W2', 'T': 1, 'G': 7}, '2858': {'N': 'W1/W2X', 'T': 1, 'G': 7}, '2859': {'N': 'W2/W1X', 'T': 1, 'G': 7}, '3527': {'N': 'W1/W2X - Yes', 'T': 1, 'G': 7}, '3528': {'N': '"
+  },
+  {
+    "url": "https://betwinner-16742.bar/service-api/main-line-feed/v1/expressDay?cfView=3&country=190&gr=495&lng=en&ref=152",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_preview": "[{'expressId': 679215, 'cf': 6.269, 'cfView': '6.269', 'events': [{'sport': {'timeName': 'Half', 'timesName': 'Halves', 'id': 1, 'name': 'Football'}, 'liga': {'countryImage': '/sfiles/logo-flag/f791278851c9da6e30f0c86dc6244409.png', 'image': '/sfiles/logo-champ/52ccc7a2015c783627fbd4d5b4e11049.png', 'id': 118593, 'name': 'UEFA Europa League'}, 'opponent1': {'fullName': 'Celtic', 'countryId': 219, 'opps': [{'id': 6378, 'name': 'Celtic', 'image': 'c71d9a2f4207e7cff07ced63a2f5b196.png'}]}, 'opponen"
+  },
+  {
+    "url": "https://betwinner-16742.bar/web-api/api/v3/bonuses/welcome-bonuses",
+    "status": 200,
+    "content_type": "application/vnd.api+json",
+    "body_preview": "{'data': [{'type': 'register-bonus', 'id': '0', 'attributes': {'id': 0, 'title': 'Bonus for sports', 'bonusCode': 'SPORT', 'description': '200% first deposit bonus up to 5500TRY', 'isSelected': False, 'currency_code': 'TRY', 'percent': 200, 'max_bonus': 5500, 'min_deposit': 30, 'currency_symbol': '₺'}}, {'type': 'register-bonus', 'id': '1', 'attributes': {'id': 1, 'title': 'Casino + Win Games', 'bonusCode': 'CASINO', 'description': 'Welcome package up to 45000 TRY + 150 FS', 'isSelected': False,"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/betstemplates/bets_model_short_en_2.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'2': {'80': {'M': {'398': {'N': 'Yes', 'T': 1, 'G': 37}, '399': {'N': 'No', 'T': 1, 'G': 37}, '8276': {'N': '[] - Yes', 'T': 7, 'G': 37}, '8277': {'N': '[] - No', 'T': 7, 'G': 37}}, 'N': 'Group Qualification', 'C': 2, 'GN': {'37': 'Group Qualification'}}, '52': {'M': {'522': {'N': '1st Half', 'T': 1, 'G': 84}, '523': {'N': '2nd Half', 'T': 1, 'G': 84}, '524': {'N': 'Break', 'T': 1, 'G': 84}}, 'N': 'First Substitution', 'C': 1, 'GN': {'84': 'First Substitution'}}, '53': {'M': {'525': {'N': '1 > "
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/betstemplates/bets_model_short_en_46.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'46': {'9273': {'M': {'9813': {'N': '[], Over ()', 'T': 9, 'G': 3071}, '9814': {'N': '[], Under ()', 'T': 9, 'G': 3071}}, 'N': 'Total Offsides In 1st Half', 'C': 1, 'GN': {'3071': 'Total Offsides In 1st Half'}}, '9274': {'M': {'9815': {'N': '[], Over ()', 'T': 9, 'G': 3072}, '9816': {'N': '[], Under ()', 'T': 9, 'G': 3072}}, 'N': 'Total Offsides In 2nd Half', 'C': 1, 'GN': {'3072': 'Total Offsides In 2nd Half'}}, '9275': {'M': {'9817': {'N': '[], Over ()', 'T': 9, 'G': 3073}, '9818': {'N': '[],"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/betstemplates/bets_model_short_en_18.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'18': {'2867': {'M': {'195': {'N': 'Yes', 'T': 1, 'G': 28}, '210': {'N': 'No', 'T': 1, 'G': 28}}, 'N': 'Team 2 Win To Nil', 'C': 1, 'GN': {'28': 'Team 2 Win To Nil'}}, '2866': {'M': {'200': {'N': 'Yes', 'T': 1, 'G': 31}, '205': {'N': 'No', 'T': 1, 'G': 31}}, 'N': 'Team 1 Win To Nil', 'C': 1, 'GN': {'31': 'Team 1 Win To Nil'}}, '2888': {'M': {'1151': {'N': 'Second Goal In () Half - Yes', 'T': 3, 'G': 50}, '1152': {'N': 'Second Goal In () Half - No', 'T': 3, 'G': 50}, '4406': {'N': 'Goal () In ()"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/betstemplates/bets_model_short_en_19.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'19': {'2953': {'M': {'3941': {'N': 'Player 1 To Win Their 2nd Serve In 1st Game', 'T': 1, 'G': 1048}, '3942': {'N': 'Player 1 To Lose On Their 2nd Serve In 1st Game', 'T': 1, 'G': 1048}, '3943': {'N': 'Player 2 To Win Their 2nd Serve In 1st Game', 'T': 1, 'G': 1048}, '3944': {'N': 'Player 2 To Lose On Their 2nd Serve In 1st Game', 'T': 1, 'G': 1048}}, 'N': \"Player's 2nd Serve In 1st Game\", 'C': 1, 'GN': {'1048': \"Player's 2nd Serve In 1st Game\"}}, '2955': {'M': {'3945': {'N': 'Player 1 To Win "
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/betstemplates/bets_model_short_en_10.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'10': {'1032': {'M': {'1098': {'N': 'Penalty Shootout - Yes', 'T': 1, 'G': 245}, '1099': {'N': 'Penalty Shootout - No', 'T': 1, 'G': 245}, '2577': {'N': 'Regular Time - Yes', 'T': 1, 'G': 245}, '2578': {'N': 'Regular Time - No', 'T': 1, 'G': 245}, '2579': {'N': 'Extra Time - Yes', 'T': 1, 'G': 245}, '2580': {'N': 'Extra Time - No', 'T': 1, 'G': 245}, '2581': {'N': 'Overtime - Yes', 'T': 1, 'G': 245}, '2582': {'N': 'Overtime - No', 'T': 1, 'G': 245}, '2583': {'N': 'Penalty Shootout - Yes', 'T': "
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/betstemplates/bets_model_short_en_56.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'56': {'9939': {'M': {'4546': {'N': '() Or Less - Yes', 'T': 3, 'G': 3863}, '4547': {'N': '() Or Less - No', 'T': 3, 'G': 3863}, '4548': {'N': '() - Yes', 'T': 3, 'G': 3863}, '4549': {'N': '() - No', 'T': 3, 'G': 3863}, '4550': {'N': 'From () To () - Yes', 'T': 5, 'G': 3863}, '4551': {'N': 'From () To () - No', 'T': 5, 'G': 3863}, '4552': {'N': '() Or More - Yes', 'T': 3, 'G': 3863}, '4553': {'N': '() Or More - No', 'T': 3, 'G': 3863}, '5298': {'N': '()', 'T': 3, 'G': 3863}, '6164': {'N': 'Tota"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/betstemplates/bets_model_short_en_4.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'4': {'182': {'M': {'971': {'N': '() Over', 'T': 3, 'G': 180}, '972': {'N': '() Under', 'T': 3, 'G': 180}}, 'N': 'Total Sets', 'C': 2, 'GN': {'180': 'Total Sets'}}, '180': {'M': {'993': {'N': 'Team 1', 'T': 1, 'G': 187}, '994': {'N': 'Team 2', 'T': 1, 'G': 187}}, 'N': 'First Rebound', 'C': 2, 'GN': {'187': 'First Rebound'}}, '258': {'M': {'995': {'N': 'Team 1', 'T': 1, 'G': 188}, '996': {'N': 'Team 2', 'T': 1, 'G': 188}}, 'N': 'Which Team Will Kick Off The Match', 'C': 2, 'GN': {'188': 'Which T"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/betstemplates/bets_model_short_en_48.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'48': {'9412': {'M': {'10250': {'N': '[] To Come From Behind And W1X In The Match - Yes', 'T': 1, 'G': 1}, '10251': {'N': '[] To Come From Behind And W1X In The Match - No', 'T': 1, 'G': 1}, '10252': {'N': '[] To Come From Behind And W2X In The Match - Yes', 'T': 1, 'G': 1}, '10253': {'N': '[] To Come From Behind And W2X In The Match - No', 'T': 1, 'G': 1}}, 'N': '1X2', 'C': 1, 'GN': {'1': '1X2'}}, '9419': {'M': {'10308': {'N': 'Total Tackles In The Match Over ()', 'T': 1, 'G': 1}, '10309': {'N"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/betstemplates/bets_model_short_en_8.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'8': {'887': {'M': {'338': {'N': '1-15 mins - Yes', 'T': 1, 'G': 14}, '339': {'N': '1-15 Mins - No', 'T': 1, 'G': 14}, '340': {'N': '16-30 Mins - Yes', 'T': 1, 'G': 14}, '341': {'N': '16-30 Mins - No', 'T': 1, 'G': 14}, '342': {'N': '31-45 Mins - Yes', 'T': 1, 'G': 14}, '343': {'N': '31-45 Mins - No', 'T': 1, 'G': 14}, '344': {'N': '46-60 Mins - Yes', 'T': 1, 'G': 14}, '345': {'N': '46-60 Mins - No', 'T': 1, 'G': 14}, '346': {'N': '61-75 Mins - Yes', 'T': 1, 'G': 14}, '347': {'N': '61-75 Mins -"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/betstemplates/bets_model_short_en_5.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'5': {'345': {'M': {'1260': {'N': 'TO () From (1) To (5) Min', 'T': 23, 'G': 266}, '1261': {'N': 'TU () From (1) To (5) Min', 'T': 23, 'G': 266}, '1262': {'N': 'TO () From (1) To (10) Min', 'T': 25, 'G': 266}, '1263': {'N': 'TU () From (1) To (10) Min', 'T': 25, 'G': 266}, '1264': {'N': 'TO () From (1) To (15) Min', 'T': 27, 'G': 266}, '1265': {'N': 'TU () From (1) To (15) Min', 'T': 27, 'G': 266}, '1266': {'N': 'TO () From (1) To (2) Min', 'T': 21, 'G': 266}, '1267': {'N': 'TU () From (1) To ("
+  },
+  {
+    "url": "https://betwinner-16742.bar/service-api/LineFeed/GetGameZip?id=300956136&lng=en&isSubGames=true&GroupEvents=true&countevents=250&grMode=4&partner=152&topGroups=&country=190&marketType=1&isNewBuilder=true",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_preview": "{'Error': '', 'ErrorCode': 0, 'Guid': '', 'Id': 0, 'Success': True, 'Value': {'BBA': True, 'CHIMG': '52ccc7a2015c783627fbd4d5b4e11049.png', 'CI': 300956136, 'CID': 1, 'CN': 'Europe', 'COI': 223, 'EC': 1280, 'EGC': 206, 'GE': [{'E': [[{'C': 4.2, 'CV': '4.2', 'G': 1, 'GS': 1, 'T': 1}], [{'C': 3.44, 'CV': '3.44', 'G': 1, 'GS': 1, 'T': 2}], [{'C': 1.91, 'CV': '1.91', 'G': 1, 'GS': 1, 'T': 3}]], 'G': 1, 'GS': 1}, {'E': [[{'C': 1.922, 'CV': '1.922', 'G': 8, 'GS': 2, 'T': 4}], [{'C': 1.342, 'CV': '1.34"
+  },
+  {
+    "url": "https://betwinner-16742.bar/account-api/user/v1/phone-data",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'countries': [{'id': 190, 'name': 'Turkey', 'code': 'tr', 'alpha2': 'TR', 'phoneCode': '+90', 'otpChannels': ['sms']}, {'id': 3, 'name': 'Abkhazia', 'code': 'ab', 'alpha2': 'AB', 'phoneCode': '+7', 'otpChannels': ['sms']}, {'id': 17, 'name': 'Afghanistan', 'code': 'af', 'alpha2': 'AF', 'phoneCode': '+93', 'otpChannels': ['sms']}, {'id': 7, 'name': 'Albania', 'code': 'al', 'alpha2': 'AL', 'phoneCode': '+355', 'otpChannels': ['sms']}, {'id': 8, 'name': 'Algeria', 'code': 'dz', 'alpha2': 'DZ', 'ph"
+  },
+  {
+    "url": "https://betwinner-16742.bar/service-api/LineFeed/GetSportsShortZip?sports=1&champs=118593&lng=en&country=190&partner=152&virtualSports=true&gr=495&groupChamps=true",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_preview": "{'Error': '', 'ErrorCode': 0, 'Guid': '', 'Id': 0, 'Success': True, 'Value': [{'C': 2110, 'CC': 334, 'CID': 1, 'I': 1, 'IT': 1, 'N': 'Football', 'R': 'Футбол', 'L': [{'CHIMG': '949e90f82a4fc130124ed7e54d4c33f2.png', 'CI': 225, 'GC': 2, 'L': 'Enhanced Daily Specials', 'LI': 1413697, 'LR': 'Специальные ставки игрового дня'}, {'CHIMG': '86b3049b3592a71249e7cc77927822d4.png', 'CI': 223, 'GC': 10, 'L': 'UEFA Champions League', 'LI': 118587, 'LR': 'Лига Чемпионов УЕФА', 'T': 1000}, {'CHIMG': '266f3f36"
+  },
+  {
+    "url": "https://betwinner-16742.bar/genfiles/cms/152-495/desktop/media_asset/2b1e44e5b632b32f1e4d7f1caf27e497.json",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'mobile_apps_logo': {'main': '/genfiles/cms/152-495/desktop/media_asset/9366b160cf40a08b9b43089acf4225d9.svg', 'secondary': None}, 'mobile_apps_logo_mobi': {'main': '/genfiles/cms/desktop/media_asset/aaf790c5e514fc163818b0a813e96c3c.svg', 'secondary': None}, 'mobile_apps_app_mobile_poster_mobi': {'main': '/genfiles/cms/desktop/media_asset/33780a8653e3afe8571704144b4ec695.png', 'secondary': '/genfiles/cms/desktop/media_asset/33780a8653e3afe8571704144b4ec695.webp'}, 'mobile_apps_app_mobile_icons_"
+  },
+  {
+    "url": "https://betwinner-16742.bar/web-api/mobile",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'isIosAllowed': False, 'isIosPopup': False, 'showInstructionIos': False, 'phoneNumber': '', 'androidLink': 'https://betwinner-16742.bar/downloads/androidclient/releases_android/betwinner/site/betwinner.apk', 'androidLinkLite': '', 'isAppsFlyerAndroidLink': False, 'isAppsFlyerIosLink': False, 'iosLink': '', 'success': True}"
+  },
+  {
+    "url": "https://betwinner-16742.bar/bff-api/config/group/get?groups=b.rum&lang=en",
+    "status": 200,
+    "content_type": "application/json",
+    "body_preview": "{'-3000': ['/cedexis/r20.gif', '/cedexis/r20-100KB.png'], '-3001': ['v2d.cdnsfree.com', 'v2gc.traincdn.com', 'v2ex.cdnsfree.com']}"
+  }
+]
