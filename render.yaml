@@ -1,0 +1,38 @@
+# Render Blueprint for the hosted Arb Finder (hosted/).
+# Render dashboard → New → Blueprint → pick this repo. Fill in the secrets when asked.
+services:
+  - type: web
+    name: arb-finder
+    runtime: node
+    plan: free
+    rootDir: hosted
+    buildCommand: "true"          # zero dependencies, nothing to build
+    startCommand: node server.mjs
+    healthCheckPath: /healthz
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      # --- required
+      - key: APP_PASSWORD           # password for the web page
+        sync: false
+      - key: ODDSPAPI_KEY           # https://oddspapi.io (free key)
+        sync: false
+      # --- recommended
+      - key: UPLOAD_KEY             # separate key for the Stake userscript / local uploads
+        generateValue: true
+      - key: NTFY_TOPIC             # long random topic name for push alerts (ntfy app)
+        sync: false
+      - key: BOOKMAKERS
+        value: stake,pinnacle,bet365,1xbet
+      - key: SPORTS                 # OddsPapi sport ids: 10 soccer, 11 basketball, 12 tennis, 17 CS
+        value: "10,11,12,17"
+      - key: MIN_PROFIT
+        value: "1"
+      # --- optional
+      - key: ANTHROPIC_API_KEY      # enables the AI doctor
+        sync: false
+      - key: WINDOW_HOURS
+        value: "2"
+      - key: SCAN_INTERVAL_MIN
+        value: "10"

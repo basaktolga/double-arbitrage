@@ -12,9 +12,13 @@ match from several bookmakers and comparing over/under lines.
 
 | Path | What it is |
 |---|---|
+| `hosted/` | **Hosted arb finder** (Render) — Stake boosted odds + OddsPapi bookmakers + scraper results, phone UI, alerts, doctor. See `hosted/README.md` |
+| `stake-userscript/` | Safari/Userscripts script that collects Stake's boosted odds and uploads them to the hosted app |
+| `render.yaml` | Render Blueprint for `hosted/` |
 | `console/` | Local web control panel — run scrapers, edit mirror URLs, browse matches and arbs |
 | `<book>-scraper/` | One scraper per bookmaker (Playwright / patchright) |
 | `json-2file-arbfinder/arb_finder.py` | Pairs the scraped files by match and computes the arbs |
+| `json-2file-arbfinder/push_to_hosted.py` | Uploads the scrapers' arbs to the hosted app |
 
 ## Running it
 

@@ -1,0 +1,15 @@
+{
+  "name": "arb-finder-hosted",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hosted arb finder: Stake boosted odds + OddsPapi bookmakers + local scraper results",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "demo": "DEMO=1 node server.mjs",
+    "test": "NODE_ENV=test node --test test/*.test.mjs"
+  }
+}
