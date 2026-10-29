@@ -44,12 +44,12 @@ export function healthChecks(snap) {
   // ---- Stake boosted (userscript)
   const b = snap.boosted;
   if (!b) {
-    add("stake", "off", "No boosted odds uploaded yet", "Install the userscript, tap ⚡ → Cloud setup, then Scan ALL categories.");
+    add("stake", "off", "No boosted odds yet", snap.collector?.enabled ? "The server collects them at the next scan. The phone userscript also works as a backup." : "Install the userscript, tap ⚡ → Cloud setup, then Scan ALL categories.");
   } else {
     const ageMin = Math.round((snap.now - b.uploadedAt) / 60000);
     if (b.count === 0) add("stake", "error", "Last upload had 0 boosted items", "If Stake clearly shows boosts, the page layout changed — use the userscript's Debug button and send the copied HTML.");
-    else if (ageMin > s.boostedMaxAgeMin) add("stake", "warn", `Boosted odds are ${ageMin} min old`, "Alerts for boosted arbs are paused until a fresh upload. Open Stake and run the userscript scan (or turn Auto on).");
-    else add("stake", "ok", `${b.count} boosted items, ${ageMin} min old`, "");
+    else if (ageMin > s.boostedMaxAgeMin) add("stake", "warn", `Boosted odds are ${ageMin} min old`, "Alerts for boosted arbs are paused until fresh data — from the server collector or the phone userscript.");
+    else add("stake", "ok", `${b.count} boosted items, ${ageMin} min old`, b.source === "server" ? "Collected by the server." : "Uploaded from your phone.");
     if (scan && b.count) {
       const unmatched = scan.unmatchedBoosted.length;
       const ratio = unmatched / b.count;
@@ -57,6 +57,38 @@ export function healthChecks(snap) {
         const top = topReason(scan.unmatchedBoosted);
         add("stake", "warn", `${unmatched}/${b.count} boosts couldn't be compared`, `Most common reason: ${top}.`);
       }
+    }
+  }
+
+  // ---- Stake collector (server-side browser)
+  const c = snap.collector;
+  if (c && !c.available) {
+    if (!b) add("collector", "off", "Server collector off", "STAKE_COLLECTOR=0 — boosts only come from the phone userscript.");
+  } else if (c && !c.enabled) {
+    add("collector", "off", "Server collector paused", "Turned off in Settings.");
+  } else if (c) {
+    const L = c.last;
+    const next = c.nextDueAt > snap.now ? ` Next try in ${fmtAge(Math.round((c.nextDueAt - snap.now) / 60000))}.` : "";
+    if (c.running) add("collector", "ok", "Collecting Stake boosts now", "One page at a time; a full run takes a few minutes.");
+    else if (!L) add("collector", "off", "Not run yet", "Runs at the start of the next scan.");
+    else {
+      const ago = `${fmtAge(Math.round((snap.now - L.at) / 60000))} ago`;
+      const peak = L.peakMb ? ` Peak memory ${L.peakMb} MB of ${c.maxMb}.` : "";
+      const msgs = {
+        ok: ["ok", `Collected ${L.count} boosts ${ago}`, `${L.pages.length} pages in ${Math.round(L.durationMs / 1000)}s.${peak}`],
+        blocked: ["error", "Stake served a bot-check page", `The server's browser was challenged (${L.error}). The app does not try to get past bot checks — use the phone userscript for boosts instead.${next}`],
+        geo_blocked: ["error", "Stake is not available from the server's location", `The site showed a region block. Change STAKE_URL only to an address you're allowed to use, or use the phone userscript.${next}`],
+        no_odds_elements: ["warn", "Pages loaded but no odds were found", `${L.error ?? ""} Use the userscript's Debug button on your phone and send the copied HTML so the selectors can be updated.${next}`],
+        no_browser: ["error", "No browser on the server", "playwright-core / Chromium is missing. Deploy with the Dockerfile (render.yaml does this)."],
+        memory_limit: ["warn", "Collector stopped for using too much memory", `Peak ${L.peakMb} MB. The server itself kept running.${L.count ? ` Kept ${L.count} boosts it had already read.` : ""} Try fewer Stake categories in Settings.${next}`],
+        timeout: ["warn", "Collector run took too long and was stopped", `The server itself kept running.${L.count ? ` Kept ${L.count} boosts it had already read.` : ""} Try fewer categories, or the site is slow.${next}`],
+        crashed: ["warn", "Collector crashed", `${L.error ?? ""} The server itself kept running.${next}`],
+        error: ["warn", "Collector failed", `${L.error ?? ""}${next}`],
+      };
+      const [level, title, detail] = msgs[L.status] ?? ["warn", `Collector: ${L.status}`, L.error ?? ""];
+      add("collector", level, title, detail.trim());
+      const failed = (L.pages ?? []).filter((p) => p.error);
+      if (L.status === "ok" && failed.length) add("collector", "warn", `${failed.length} Stake page(s) failed`, failed.map((p) => `${p.category}: ${p.error}`).join("; ").slice(0, 300));
     }
   }
 

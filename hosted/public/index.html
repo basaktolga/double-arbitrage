@@ -54,6 +54,12 @@
       <!-- BOOSTED -->
       <section id="tab-boosted" class="tab" hidden>
         <div id="boost-head" class="note"></div>
+        <div id="collector-box" class="card" hidden>
+          <div class="row between">
+            <div><strong>Server collector</strong><div id="collector-text" class="dim small"></div></div>
+            <button id="collect-btn" class="btn">Collect now</button>
+          </div>
+        </div>
         <h2>Compared</h2>
         <div id="boost-list" class="list"></div>
         <h2>Not compared</h2>
@@ -105,6 +111,10 @@
           </div>
           <label class="check"><input name="skipIntegerLines" type="checkbox"> Skip whole-number lines (push risk)</label>
           <label class="check"><input name="alertBoostedOnly" type="checkbox"> Alert only for boosted arbs</label>
+          <strong>Stake collector (on the server)</strong>
+          <label class="check"><input name="stakeCollector" type="checkbox"> Collect Stake boosts on the server</label>
+          <label>Stake pages to read <small>(category slugs, comma separated — fewer is faster and lighter)</small><input name="stakeCategories" autocapitalize="off" autocorrect="off" spellcheck="false"></label>
+          <label>Collect every (min)<input name="collectEveryMin" type="number" step="5"></label>
           <button class="btn primary" type="submit">Save</button>
           <p id="settings-msg" class="dim small"></p>
         </form>

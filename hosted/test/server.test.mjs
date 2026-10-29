@@ -85,7 +85,7 @@ test("demo mode end to end: auth, scan, boosted arbs, settings, doctor", async (
 });
 
 test("no password configured → API disabled", async () => {
-  const { app, call } = await start({}, demoFetch());
+  const { app, call } = await start({ STAKE_COLLECTOR: "0" }, demoFetch());
   try {
     assert.equal((await call("/api/state", { key: "" })).status, 503);
   } finally {
@@ -115,7 +115,7 @@ test("real-mode errors surface: 401 key, unknown slugs, self-ping and alerts", a
     throw new Error("unexpected " + url);
   };
   const { app, call } = await start(
-    { APP_PASSWORD: "pw", ODDSPAPI_KEY: "k", BOOKMAKERS: "stake,pinnacle,notabook", SPORTS: "11", NTFY_TOPIC: "t", MIN_PROFIT: "0", RENDER_EXTERNAL_URL: "https://me.example" },
+    { APP_PASSWORD: "pw", ODDSPAPI_KEY: "k", STAKE_COLLECTOR: "0", BOOKMAKERS: "stake,pinnacle,notabook", SPORTS: "11", NTFY_TOPIC: "t", MIN_PROFIT: "0", RENDER_EXTERNAL_URL: "https://me.example" },
     fetchImpl,
   );
   try {

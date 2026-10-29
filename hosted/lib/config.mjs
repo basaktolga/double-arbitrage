@@ -23,6 +23,10 @@ export function envSettings(env = process.env) {
     scanIntervalMin: num(env.SCAN_INTERVAL_MIN, 10),
     windowHours: num(env.WINDOW_HOURS, 2),
     alertBoostedOnly: env.ALERT_BOOSTED_ONLY === "1",
+    // Server-side Stake collector (headless browser). Slow on purpose: one page at a time.
+    stakeCollector: env.STAKE_COLLECTOR !== "0",
+    stakeCategories: list(env.STAKE_CATEGORIES, ["home", "soccer", "basketball", "tennis", "ice-hockey", "esports"]).map((s) => s.toLowerCase()),
+    collectEveryMin: num(env.STAKE_COLLECT_EVERY_MIN, 30),
   };
 }
 
@@ -38,6 +42,9 @@ const EDITABLE = {
   scanIntervalMin: (v) => Math.max(3, Math.min(120, Number(v))),
   windowHours: (v) => Math.max(0.25, Math.min(6, Number(v))),
   alertBoostedOnly: (v) => v === true || v === "true" || v === "1",
+  stakeCollector: (v) => v === true || v === "true" || v === "1",
+  stakeCategories: (v) => list(v).map((s) => s.toLowerCase().replace(/[^a-z0-9-]/g, "")).filter(Boolean).slice(0, 20),
+  collectEveryMin: (v) => Math.max(10, Math.min(240, Number(v))),
 };
 
 /** Apply a partial update from the UI; returns the new settings and any rejected keys. */

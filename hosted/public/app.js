@@ -234,11 +234,27 @@ function renderBoosted(now) {
   const b = data.boosted;
   if (!b) {
     head.className = "note";
-    head.textContent = "No boosted odds uploaded yet. On Stake, tap ⚡ → Cloud setup, then Scan ALL categories.";
+    head.textContent = data.collector?.enabled
+      ? "No boosted odds yet — the server collects them at the start of the next scan (takes a few minutes)."
+      : "No boosted odds uploaded yet. On Stake, tap ⚡ → Cloud setup, then Scan ALL categories.";
   } else {
     head.className = b.fresh ? "note" : "note warn";
-    head.textContent = `${b.count} boosted selections uploaded ${ago(now - b.uploadedAt)}.` + (b.fresh ? "" : " Too old — boosted alerts are paused until a fresh upload.") +
+    head.textContent = `${b.count} boosted selections ${b.source === "server" ? "collected by the server" : "uploaded from your phone"} ${ago(now - b.uploadedAt)}.` + (b.fresh ? "" : " Too old — boosted alerts are paused until fresh data arrives.") +
       " Check each boost's terms: Stake marks these as multi-bet boosts, so some may only apply inside a multi, and most have a low max stake.";
+  }
+  const c = data.collector;
+  $("#collector-box").hidden = !c?.available;
+  if (c?.available) {
+    const L = c.last;
+    $("#collector-text").textContent = c.running
+      ? "Collecting now…"
+      : !c.enabled
+        ? "Paused in Settings."
+        : L
+          ? `Last run ${ago(now - L.at)}: ${L.status === "ok" ? `${L.count} boosts` : L.status.replace(/_/g, " ")}` +
+            (c.nextDueAt > now ? ` · next ${Math.round((c.nextDueAt - now) / 60000)} min` : " · runs with the next scan")
+          : "Runs at the start of the next scan.";
+    $("#collect-btn").disabled = c.running || data.running;
   }
   const list = $("#boost-list");
   list.replaceChildren();
@@ -271,7 +287,7 @@ function renderSources(now) {
   const badge = $("#badge-health");
   badge.textContent = bad ? String(bad) : "";
   badge.className = bad ? "warn" : "";
-  const names = { oddspapi: "OddsPapi", stake: "Stake boosted", local: "Local scrapers", server: "Server" };
+  const names = { oddspapi: "OddsPapi", stake: "Stake boosted", collector: "Stake collector", local: "Local scrapers", server: "Server" };
   for (const c of checks) {
     const h = el("div", "health");
     h.append(el("span", `dot ${c.level}`));
@@ -318,6 +334,9 @@ function renderSettings(now) {
   for (const k of ["minProfit", "lookaheadHours", "minLeadMinutes", "maxFixturesPerSport", "scanIntervalMin", "windowHours"]) f[k].value = s[k];
   f.skipIntegerLines.checked = s.skipIntegerLines;
   f.alertBoostedOnly.checked = s.alertBoostedOnly;
+  f.stakeCollector.checked = s.stakeCollector;
+  f.stakeCategories.value = s.stakeCategories.join(", ");
+  f.collectEveryMin.value = s.collectEveryMin;
   const box = $("#sports");
   box.replaceChildren();
   for (const [id, name] of Object.entries(SPORTS)) {
@@ -432,6 +451,9 @@ $("#settings").addEventListener("submit", async (e) => {
     sports: [...document.querySelectorAll("#sports input:checked")].map((c) => c.value).join(","),
     skipIntegerLines: f.skipIntegerLines.checked,
     alertBoostedOnly: f.alertBoostedOnly.checked,
+    stakeCollector: f.stakeCollector.checked,
+    stakeCategories: f.stakeCategories.value,
+    collectEveryMin: f.collectEveryMin.value,
   };
   for (const k of ["minProfit", "lookaheadHours", "minLeadMinutes", "maxFixturesPerSport", "scanIntervalMin", "windowHours"]) body[k] = f[k].value;
   try {
@@ -442,6 +464,16 @@ $("#settings").addEventListener("submit", async (e) => {
   } catch (err) {
     $("#settings-msg").textContent = `Not saved: ${err.message}`;
   }
+});
+
+$("#collect-btn").addEventListener("click", async () => {
+  $("#collect-btn").disabled = true;
+  try {
+    await api("/api/collect", { method: "POST" });
+  } catch (e) {
+    $("#collector-text").textContent = e.message;
+  }
+  setTimeout(refresh, 400);
 });
 
 $("#win-extend").addEventListener("click", async () => {

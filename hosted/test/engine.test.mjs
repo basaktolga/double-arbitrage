@@ -30,6 +30,9 @@ test("names: aliases, accents, order, initials", () => {
   assert.ok(nameScore("Real Madrid", "Real Sociedad") < 0.6);
   assert.deepEqual(splitMatch("A FC vs B"), { home: "A FC", away: "B" });
   assert.equal(splitMatch("lonely"), null);
+  // 3-way markets list the draw button between the teams
+  assert.deepEqual(splitMatch("Galatasaray vs Draw vs Fenerbahce"), { home: "Galatasaray", away: "Fenerbahce" });
+  assert.deepEqual(splitMatch("Galatasaray vs Beraberlik vs Fenerbahçe"), { home: "Galatasaray", away: "Fenerbahçe" });
   const hit = findFixture([{ ...NBA, fixtureId: "x", home: "Boston Celtics", away: "Miami Heat" }, NBA], "Golden State Warriors", "Denver Nuggets");
   assert.equal(hit.fixture.fixtureId, NBA.fixtureId);
   assert.equal(sideOf("Golden State Warriors", NBA), "2");

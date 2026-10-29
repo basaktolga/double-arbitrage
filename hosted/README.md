@@ -8,7 +8,7 @@ It combines three sources into one list of arbitrage opportunities:
 | Source | How it gets in | What it covers |
 |---|---|---|
 | **OddsPapi** | The server calls the API | Pre-match odds from the bookmakers you list (Pinnacle, Bet365, 1xBet, Stake…) on every main market: winner, 1X2, totals, handicaps, BTTS, draw-no-bet |
-| **Stake boosted odds** | The userscript in `stake-userscript/` uploads them from your own browser | Stake's boosted prices, swapped in for Stake's normal price on that outcome |
+| **Stake boosted odds** | Collected **on the server** by a headless browser (the phone userscript in `stake-userscript/` still works as a backup) | Stake's boosted prices, swapped in for Stake's normal price on that outcome |
 | **Local scrapers** | `json-2file-arbfinder/push_to_hosted.py` uploads from your PC | The niche over/under markets (corners, fouls, throw-ins…) the existing scrapers find |
 
 Pre-match only: anything already live, or starting within `MIN_LEAD_MINUTES`, is skipped.
@@ -35,6 +35,29 @@ Filters applied before anything is shown:
 Each leg shows its price age and, where the book publishes one, its stake limit;
 the card shows the largest total the limits allow.
 
+## Stake collector (server-side)
+
+At the start of a scan, if the last collection is older than `STAKE_COLLECT_EVERY_MIN`
+(default 30), the server reads Stake's boosted odds itself. It's slow on purpose so it
+fits in the free plan's 512 MB and never takes the app down:
+
+- It runs in **its own process** (`collector-worker.mjs`). The web server only ever gets
+  a result back; a browser crash can't crash the server.
+- **One page at a time** (`STAKE_CATEGORIES`), a pause between pages, and the browser
+  is restarted every 3 pages so memory can't build up. Images, video and fonts aren't
+  downloaded.
+- A **watchdog** measures the browser's memory every second and kills the whole browser
+  if it goes over `STAKE_COLLECTOR_MAX_MB` (default 400) or if the container is >92% full.
+  The same happens if a run takes longer than `STAKE_COLLECTOR_TIMEOUT_MIN` (default 8).
+  Boosts read before the stop are kept.
+- Failures back off (up to 2 h) instead of retrying in a loop.
+
+It identifies itself honestly as a headless browser and **does not try to get past bot
+checks or region blocks**. If Stake shows a challenge or a "not available in your
+region" page, the collector reports it in **Sources**, waits 3 h before trying again,
+and you can keep using the phone userscript for boosts. Set `STAKE_URL` only to an
+address you're allowed to use.
+
 ## Keep-alive windows (free plan)
 
 Render's free plan sleeps a service after ~15 min without traffic. Tapping **Scan**
@@ -51,7 +74,8 @@ on keep-alive pings.
 
 1. **OddsPapi key** — sign up at oddspapi.io and copy your API key.
 2. **Render** — dashboard → **New → Blueprint** → connect GitHub → pick this repo
-   (and this branch until it's merged). Render reads `render.yaml`.
+   (and this branch until it's merged). Render reads `render.yaml` and builds the
+   Docker image (it includes Chromium, so the first build takes a few minutes).
 3. Fill in the values it asks for:
    - `APP_PASSWORD` — the page password
    - `ODDSPAPI_KEY`
@@ -59,9 +83,10 @@ on keep-alive pings.
    - `ANTHROPIC_API_KEY` — optional; turns on the AI doctor
    - `UPLOAD_KEY` is generated for you; copy it from the service's Environment tab
 4. Open `https://<your-service>.onrender.com`, enter the password, tap **Scan**.
-5. **Userscript** — put `stake-userscript/boosted-odds.user.js` in your Userscripts
-   folder, open Stake, tap ⚡ → **Cloud setup**, enter the Render URL and `UPLOAD_KEY`,
-   then **Scan ALL categories**.
+5. Check **Sources → Stake collector** after the first scan. If it says the server was
+   blocked, use the backup: put `stake-userscript/boosted-odds.user.js` in your
+   Userscripts folder, open Stake, tap ⚡ → **Cloud setup**, enter the Render URL and
+   `UPLOAD_KEY`, then **Scan ALL categories**.
 
 ## Environment variables
 
@@ -85,6 +110,12 @@ on keep-alive pings.
 | `NTFY_TOPIC` / `NTFY_SERVER` | — / ntfy.sh | Push alerts |
 | `ALERT_BOOSTED_ONLY` | `0` | `1` to alert only on arbs with a boosted leg |
 | `ANTHROPIC_API_KEY` / `ANTHROPIC_MODEL` | — / `claude-sonnet-5-5` | AI doctor |
+| `STAKE_COLLECTOR` | `1` (`0` in demo) | `0` to turn the server collector off |
+| `STAKE_URL` | `https://stake.com` | Stake address the server reads |
+| `STAKE_CATEGORIES` | `home,soccer,basketball,tennis,ice-hockey,esports` | Sports pages to read |
+| `STAKE_COLLECT_EVERY_MIN` | `30` | How often to collect (inside a keep-alive window) |
+| `STAKE_COLLECTOR_MAX_MB` | `400` | Browser memory cap |
+| `STAKE_COLLECTOR_TIMEOUT_MIN` | `8` | Max length of one collection run |
 | `DEMO` | `0` | `1` = fake odds, password `demo` |
 
 Settings changed in the app last until the server sleeps; put permanent values here.
@@ -103,7 +134,7 @@ local console's doctor is still the one that edits scraper code.
 ```sh
 cd hosted
 DEMO=1 node server.mjs          # http://localhost:10000, password: demo
-npm test                        # node --test, no dependencies
+npm install && npm test         # collector tests need Playwright + Chromium; they skip otherwise
 ```
 
 ## Adding bookmakers

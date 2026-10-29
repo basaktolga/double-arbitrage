@@ -22,6 +22,7 @@ import { envSettings, applySettings } from "./lib/config.mjs";
 import { createAlerter } from "./lib/alerts.mjs";
 import { healthChecks, aiDiagnosis } from "./lib/doctor.mjs";
 import { demoFetch, demoBoosted } from "./lib/demo.mjs";
+import { runCollector } from "./lib/stake-collector.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const PUBLIC = path.join(HERE, "public");
@@ -69,6 +70,16 @@ export function createApp({ env = process.env, fetchImpl = globalThis.fetch, tic
     knownBooks: null, // { at, slugs[] }
     doctor: null, // { at, text, ok }
     alertsSent: 0,
+    collector: {
+      enabled: env.STAKE_COLLECTOR ? env.STAKE_COLLECTOR !== "0" : !demo,
+      url: (env.STAKE_URL || "https://stake.com").replace(/\/+$/, ""),
+      maxMb: Number(env.STAKE_COLLECTOR_MAX_MB) || 400,
+      timeoutMs: (Number(env.STAKE_COLLECTOR_TIMEOUT_MIN) || 8) * 60_000,
+      running: false,
+      last: null, // { at, status, error, count, pages, peakMb, durationMs }
+      nextDueAt: 0,
+      failures: 0,
+    },
   };
 
   // ------------------------------------------------------------ scanning
@@ -88,12 +99,72 @@ export function createApp({ env = process.env, fetchImpl = globalThis.fetch, tic
     return state.settings.bookmakers.filter((b) => !state.knownBooks.slugs.includes(b));
   }
 
+  // ------------------------------------------------------------ stake collector
+
+  async function collect(reason) {
+    const c = state.collector;
+    if (c.running) return null;
+    c.running = true;
+    const cats = state.settings.stakeCategories;
+    state.progress = `Collecting Stake boosts (0/${cats.length})…`;
+    log(`stake collector started (${reason}): ${cats.join(", ")}`);
+    let r;
+    try {
+      r = await runCollector({
+        url: c.url,
+        categories: cats,
+        maxMb: c.maxMb,
+        timeoutMs: c.timeoutMs,
+        env: env.STAKE_COLLECTOR_EXTRA_ENV ? JSON.parse(env.STAKE_COLLECTOR_EXTRA_ENV) : {},
+        onProgress: (p) => {
+          state.progress = `Collecting Stake boosts (${p.page}/${p.pages}: ${p.category})… slow on purpose`;
+        },
+      });
+    } catch (e) {
+      r = { status: "error", items: [], pages: [], error: e.message, peakMb: 0, durationMs: 0 };
+    } finally {
+      c.running = false;
+    }
+    const now = Date.now();
+    const every = state.settings.collectEveryMin * 60_000;
+    // A run that finished with usable pages replaces the boosted list, even if it is empty
+    // (no boosts right now). Failed runs keep the previous list, which then ages out.
+    const usable = r.status === "ok" || (["timeout", "memory_limit"].includes(r.status) && r.items.length > 0);
+    if (usable) state.boosted = { uploadedAt: now, items: r.items, source: "server" };
+    if (r.status === "ok") c.failures = 0;
+    else c.failures++;
+    const backoff =
+      r.status === "ok" ? every
+      : ["blocked", "geo_blocked"].includes(r.status) ? 3 * 3600_000
+      : r.status === "no_browser" ? 24 * 3600_000
+      : Math.min(every * 2 ** Math.min(c.failures, 3), 2 * 3600_000);
+    c.nextDueAt = now + backoff;
+    c.last = {
+      at: now,
+      status: r.status,
+      error: r.error ?? null,
+      count: r.items.length,
+      pages: (r.pages ?? []).map((p) => ({ category: p.category, items: p.items, outcomes: p.outcomes, error: p.error, ms: p.ms })),
+      peakMb: r.peakMb,
+      durationMs: r.durationMs,
+      usedForScan: usable,
+    };
+    log(`stake collector ${r.status}: ${r.items.length} boosts, ${Math.round(r.durationMs / 1000)}s, peak ${r.peakMb} MB${r.error ? ` — ${r.error}` : ""}`, r.status === "ok" ? "info" : "warn");
+    return r;
+  }
+
+  function collectorDue() {
+    const c = state.collector;
+    return c.enabled && state.settings.stakeCollector && !c.running && Date.now() >= c.nextDueAt;
+  }
+
   async function scan(reason = "manual") {
     if (state.running) return false;
     state.running = true;
     state.progress = "Starting…";
     log(`scan started (${reason})`);
     try {
+      if (collectorDue()) await collect(reason);
       await refreshBooks();
       const boostedDoc = boostedFresh() ? state.boosted : state.boosted ? { ...state.boosted, stale: true } : null;
       const result = await runScan({
@@ -217,13 +288,19 @@ export function createApp({ env = process.env, fetchImpl = globalThis.fetch, tic
       lastScan: state.lastScan?.stats ? state.lastScan : null,
       apiCalls: client.calls,
       unknownBooks: unknownBooks(),
-      boosted: state.boosted ? { uploadedAt: state.boosted.uploadedAt, count: state.boosted.items.length } : null,
+      boosted: state.boosted ? { uploadedAt: state.boosted.uploadedAt, count: state.boosted.items.length, source: state.boosted.source ?? "phone" } : null,
       local: state.local ? { uploadedAt: state.local.uploadedAt, scrapedAt: state.local.scrapedAt, count: localArbs().length } : null,
       selfUrl,
       window: state.window,
       pingFailures: state.pingFailures,
       alertsEnabled: alerter.enabled,
+      collector: collectorInfo(),
     };
+  }
+
+  function collectorInfo() {
+    const c = state.collector;
+    return { enabled: c.enabled && state.settings.stakeCollector, available: c.enabled, url: c.url, running: c.running, last: c.last, nextDueAt: c.nextDueAt, maxMb: c.maxMb };
   }
 
   function publicState() {
@@ -258,8 +335,9 @@ export function createApp({ env = process.env, fetchImpl = globalThis.fetch, tic
       boostedChecks: scanRes?.boostedChecks ?? [],
       unmatchedBoosted: scanRes?.unmatchedBoosted ?? [],
       boosted: state.boosted
-        ? { uploadedAt: state.boosted.uploadedAt, count: state.boosted.items.length, fresh: Boolean(boostedFresh()), items: state.boosted.items.slice(0, 300) }
+        ? { uploadedAt: state.boosted.uploadedAt, source: state.boosted.source ?? "phone", count: state.boosted.items.length, fresh: Boolean(boostedFresh()), items: state.boosted.items.slice(0, 300) }
         : null,
+      collector: collectorInfo(),
       local: snap.local,
       health: healthChecks(snap),
       doctor: state.doctor,
@@ -285,7 +363,7 @@ export function createApp({ env = process.env, fetchImpl = globalThis.fetch, tic
         const body = await readBody(req);
         if (p === "/api/stake/upload") {
           const items = cleanUpload(body);
-          state.boosted = { uploadedAt: Date.now(), items };
+          state.boosted = { uploadedAt: Date.now(), items, source: "phone" };
           log(`stake upload: ${items.length} boosted items`);
           if (!state.running && Date.now() - state.lastUploadScanAt > UPLOAD_RESCAN_DEBOUNCE_MS) {
             state.lastUploadScanAt = Date.now();
@@ -307,6 +385,15 @@ export function createApp({ env = process.env, fetchImpl = globalThis.fetch, tic
         openWindow();
         const started = await Promise.race([scan("manual").then(() => true), new Promise((r) => setTimeout(() => r(true), 50))]);
         return send(res, 202, { ok: true, started, window: state.window });
+      }
+
+      if (p === "/api/collect" && req.method === "POST") {
+        if (!state.collector.enabled) return send(res, 409, { error: "server collector is disabled (STAKE_COLLECTOR=0)" });
+        openWindow();
+        state.collector.nextDueAt = 0;
+        if (!state.settings.stakeCollector) state.settings = { ...state.settings, stakeCollector: true };
+        scan("collect");
+        return send(res, 202, { ok: true });
       }
 
       if (p === "/api/window" && req.method === "POST") {
@@ -336,6 +423,7 @@ export function createApp({ env = process.env, fetchImpl = globalThis.fetch, tic
           recentApiCalls: snap.apiCalls.slice(-30),
           unknownBooks: snap.unknownBooks,
           boosted: snap.boosted,
+          stakeCollector: snap.collector,
           local: snap.local,
           window: snap.window,
           recentLogs: logs.slice(-40),
@@ -376,7 +464,7 @@ export function createApp({ env = process.env, fetchImpl = globalThis.fetch, tic
     });
   });
 
-  return { server, state, scan, tick, openWindow, close: () => { if (timer) clearInterval(timer); server.close(); } };
+  return { server, state, scan, collect, tick, openWindow, close: () => { if (timer) clearInterval(timer); server.close(); } };
 }
 
 const isMain = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);

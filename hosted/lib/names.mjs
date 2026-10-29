@@ -45,12 +45,15 @@ export function nameScore(x, y) {
   return (ma + mb) / (A.length + B.length);
 }
 
-/** "A vs B" / "A - B" / "A v B" → { home, away } */
+/**
+ * "A vs B" / "A - B" / "A v B" → { home, away }. Three-way markets come through as
+ * "A vs Draw vs B" (the outcome buttons are home, draw, away), so draw labels are dropped.
+ */
 export function splitMatch(s) {
   const parts = String(s ?? "")
     .split(/\s+(?:vs\.?|v|-|–)\s+/i)
     .map((x) => x.trim())
-    .filter(Boolean);
+    .filter((x) => x && !DRAW_RE.test(x));
   return parts.length >= 2 ? { home: parts[0], away: parts[1] } : null;
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "arb-finder-hosted",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "description": "Hosted arb finder: Stake boosted odds + OddsPapi bookmakers + local scraper results",
   "type": "module",
@@ -10,6 +10,9 @@
   "scripts": {
     "start": "node server.mjs",
     "demo": "DEMO=1 node server.mjs",
-    "test": "NODE_ENV=test node --test test/*.test.mjs"
+    "test": "NODE_ENV=test node --test --test-concurrency=1 test/*.test.mjs"
+  },
+  "dependencies": {
+    "playwright-core": "1.48.2"
   }
 }

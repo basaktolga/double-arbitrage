@@ -1,25 +1,23 @@
 # Render Blueprint for the hosted Arb Finder (hosted/).
 # Render dashboard → New → Blueprint → pick this repo. Fill in the secrets when asked.
+# Docker is used so the server has a real Chromium for the Stake collector.
 services:
   - type: web
     name: arb-finder
-    runtime: node
+    runtime: docker
     plan: free
-    rootDir: hosted
-    buildCommand: "true"          # zero dependencies, nothing to build
-    startCommand: node server.mjs
+    dockerfilePath: ./hosted/Dockerfile
+    dockerContext: ./hosted
     healthCheckPath: /healthz
     autoDeploy: true
     envVars:
-      - key: NODE_VERSION
-        value: "22"
       # --- required
       - key: APP_PASSWORD           # password for the web page
         sync: false
       - key: ODDSPAPI_KEY           # https://oddspapi.io (free key)
         sync: false
       # --- recommended
-      - key: UPLOAD_KEY             # separate key for the Stake userscript / local uploads
+      - key: UPLOAD_KEY             # key for the phone userscript / local uploads (backup source)
         generateValue: true
       - key: NTFY_TOPIC             # long random topic name for push alerts (ntfy app)
         sync: false
@@ -29,6 +27,15 @@ services:
         value: "10,11,12,17"
       - key: MIN_PROFIT
         value: "1"
+      # --- Stake collector (server-side browser)
+      - key: STAKE_URL              # the Stake address the server may use
+        value: https://stake.com
+      - key: STAKE_CATEGORIES       # fewer pages = faster and lighter
+        value: home,soccer,basketball,tennis,ice-hockey,esports
+      - key: STAKE_COLLECT_EVERY_MIN
+        value: "30"
+      - key: STAKE_COLLECTOR_MAX_MB # browser memory cap; the free plan has 512 MB in total
+        value: "400"
       # --- optional
       - key: ANTHROPIC_API_KEY      # enables the AI doctor
         sync: false
