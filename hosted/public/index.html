@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0c0d10">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Arb Finder</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Login -->
+  <div id="login" class="login" hidden>
+    <form id="login-form" class="login-card">
+      <div class="brand">ARB<span>/</span>FINDER</div>
+      <p class="dim">Enter the password you set as <code>APP_PASSWORD</code>.</p>
+      <input id="login-pw" type="password" autocomplete="current-password" placeholder="Password" required>
+      <button class="btn primary" type="submit">Unlock</button>
+      <p id="login-err" class="err" hidden></p>
+    </form>
+  </div>
+
+  <div id="app" class="app" hidden>
+    <header class="top">
+      <div class="top-row">
+        <div class="brand">ARB<span>/</span>FINDER <small id="demo-tag" hidden>DEMO</small></div>
+        <button id="scan-btn" class="btn primary">Scan</button>
+      </div>
+      <div class="status-row">
+        <span id="awake" class="pill"></span>
+        <span id="last-scan" class="dim"></span>
+      </div>
+      <div id="progress" class="progress" hidden><span class="bar"></span><span id="progress-text"></span></div>
+    </header>
+
+    <main>
+      <!-- ARBS -->
+      <section id="tab-arbs" class="tab">
+        <div class="toolbar">
+          <div class="chips" id="arb-filter">
+            <button class="chip on" data-f="all">All</button>
+            <button class="chip" data-f="boosted">★ Boosted</button>
+            <button class="chip" data-f="oddspapi">API</button>
+            <button class="chip" data-f="local">Scrapers</button>
+          </div>
+          <label class="total">Total <input id="total" type="number" inputmode="decimal" min="1" step="1" value="100"></label>
+        </div>
+        <div id="arb-list" class="list"></div>
+      </section>
+
+      <!-- BOOSTED -->
+      <section id="tab-boosted" class="tab" hidden>
+        <div id="boost-head" class="note"></div>
+        <h2>Compared</h2>
+        <div id="boost-list" class="list"></div>
+        <h2>Not compared</h2>
+        <div id="boost-unmatched" class="list"></div>
+      </section>
+
+      <!-- SOURCES -->
+      <section id="tab-sources" class="tab" hidden>
+        <div id="health" class="list"></div>
+        <div class="card">
+          <div class="row between">
+            <strong>AI doctor</strong>
+            <button id="doctor-btn" class="btn">Diagnose</button>
+          </div>
+          <pre id="doctor-out" class="doctor dim">Runs the checks above and asks Claude what to fix. Needs ANTHROPIC_API_KEY on the server.</pre>
+        </div>
+        <div class="card">
+          <strong>Last scan</strong>
+          <div id="scan-stats" class="stats"></div>
+        </div>
+        <details class="card">
+          <summary>Server log</summary>
+          <pre id="logs" class="logs"></pre>
+        </details>
+      </section>
+
+      <!-- SETTINGS -->
+      <section id="tab-settings" class="tab" hidden>
+        <div class="card">
+          <strong>Keep-alive window</strong>
+          <p id="win-text" class="dim"></p>
+          <div class="row gap">
+            <button class="btn" id="win-extend">+2 h</button>
+            <button class="btn" id="win-stop">Let it sleep</button>
+          </div>
+        </div>
+        <form id="settings" class="card form">
+          <strong>Scan settings</strong>
+          <p class="dim small">Saved in memory until the server sleeps. To keep them, set the same values as environment variables on Render.</p>
+          <label>Bookmakers <small>(OddsPapi slugs, comma separated)</small><input name="bookmakers" autocapitalize="off" autocorrect="off" spellcheck="false"></label>
+          <fieldset><legend>Sports</legend><div id="sports" class="checks"></div></fieldset>
+          <div class="grid2">
+            <label>Min profit % for alerts<input name="minProfit" type="number" step="0.1" inputmode="decimal"></label>
+            <label>Look ahead (hours)<input name="lookaheadHours" type="number" step="1"></label>
+            <label>Skip events starting in (min)<input name="minLeadMinutes" type="number" step="1"></label>
+            <label>Max fixtures per sport<input name="maxFixturesPerSport" type="number" step="5"></label>
+            <label>Rescan every (min)<input name="scanIntervalMin" type="number" step="1"></label>
+            <label>Window length (hours)<input name="windowHours" type="number" step="0.25"></label>
+          </div>
+          <label class="check"><input name="skipIntegerLines" type="checkbox"> Skip whole-number lines (push risk)</label>
+          <label class="check"><input name="alertBoostedOnly" type="checkbox"> Alert only for boosted arbs</label>
+          <button class="btn primary" type="submit">Save</button>
+          <p id="settings-msg" class="dim small"></p>
+        </form>
+        <div class="card">
+          <strong>This device</strong>
+          <p class="dim small">Push alerts: <span id="alerts-state"></span></p>
+          <button class="btn" id="logout">Log out</button>
+        </div>
+      </section>
+    </main>
+
+    <nav class="tabs">
+      <button data-tab="arbs" class="on"><span class="ico">⇄</span>Arbs<b id="badge-arbs"></b></button>
+      <button data-tab="boosted"><span class="ico">★</span>Boosted</button>
+      <button data-tab="sources"><span class="ico">◉</span>Sources<b id="badge-health"></b></button>
+      <button data-tab="settings"><span class="ico">⚙</span>Settings</button>
+    </nav>
+  </div>
+
+  <template id="arb-card">
+    <article class="arb">
+      <div class="arb-top">
+        <span class="profit"></span>
+        <div class="arb-title"><div class="event"></div><div class="meta dim"></div></div>
+      </div>
+      <div class="legs"></div>
+      <div class="arb-foot dim"></div>
+    </article>
+  </template>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>
