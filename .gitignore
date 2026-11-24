@@ -19,3 +19,7 @@ console/providers.json
 
 # Has its own git repo
 website/
+
+# Runner output and secrets
+data/
+.env

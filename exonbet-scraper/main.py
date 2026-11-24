@@ -177,7 +177,7 @@ def scrape_all(out_dir="."):
     written = []
     with sync_playwright() as p:
         ctx = p.chromium.launch_persistent_context(
-            PROFILE, channel="chrome", headless=False, no_viewport=True,
+            PROFILE, channel=os.environ.get("BROWSER_CHANNEL", "chrome") or None, headless=False, no_viewport=True,
             # Headless is blocked by Cloudflare, so run headful but off-screen
             # so the window never appears on the user's display.
             args=["--window-position=-3000,-3000", "--window-size=1280,900"])

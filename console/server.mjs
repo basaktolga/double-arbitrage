@@ -464,16 +464,21 @@ BASE = os.environ.get("${envVar}", "https://change-me.example")
 def main():
     print(f"[${id}] starting against {BASE}", flush=True)
 
-    # TODO: fetch the match list, then for each match build a dict of
-    #   { "<market name>": { "<line>": {"over": 1.95, "under": 1.90} }, ... }
-    # matching the shape the other scrapers emit (see bson-scraper output),
-    # and save it so arb_finder can pair it with the other books:
+    # TODO: fetch the match list, then for each match write the canonical format
+    # (json-2file-arbfinder/books.py). arb_finder picks it up with no other change:
     #
-    # matches = fetch_matches()
-    # for match in matches:
-    #     markets = fetch_markets(match)
-    #     fn = os.path.join(OUT, match["name"].replace(" ", "_").lower() + "_odds_${id}.json")
-    #     json.dump(markets, open(fn, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
+    #   {"book": "${id}", "teams": ["<home>", "<away>"],
+    #    "markets": {"corners_total": {"9.5": {"over": 1.95, "under": 1.90}},
+    #                "corners_t1":    {"4.5": {"over": 1.80, "under": 2.00}}}}
+    #
+    # Market ids (corners_total, fouls_1h, shots_ot_t2, ...) are the "id" values in books.MAPPING.
+    #
+    # for match in fetch_matches():
+    #     data = {"book": "${id}", "teams": [match["home"], match["away"]],
+    #             "markets": fetch_markets(match)}
+    #     fn = os.path.join(OUT, f"{match['home']}_-_{match['away']}".replace(" ", "_").lower()
+    #                       + "_odds_${id}.json")
+    #     json.dump(data, open(fn, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
     #     print(f"[${id}] saved {os.path.basename(fn)}", flush=True)
 
     print("[${id}] not implemented yet — edit ${id}-scraper/agent_run.py", flush=True)
@@ -616,6 +621,25 @@ const server = http.createServer(async (req, res) => {
           return send(200, data);
         } catch (err) {
           return send(400, { error: err.message });
+        }
+      }
+
+      // Find every book's current mirror (domains/find_domains.py) and save it to providers.json.
+      if (url.pathname === "/api/find-domains") {
+        const python = process.env.PYTHON ?? "python3";
+        const child = spawn(python, [path.join(REPO, "domains", "find_domains.py"), "--write", "--json"], {
+          cwd: REPO,
+          stdio: ["ignore", "pipe", "pipe"],
+        });
+        let out = "";
+        let err = "";
+        child.stdout.on("data", (c) => (out += c));
+        child.stderr.on("data", (c) => (err += c));
+        const code = await new Promise((r) => child.on("close", r));
+        try {
+          return send(200, { exitCode: code, results: JSON.parse(out) });
+        } catch {
+          return send(500, { error: (err || out || `find_domains exited ${code}`).slice(-500) });
         }
       }
 
