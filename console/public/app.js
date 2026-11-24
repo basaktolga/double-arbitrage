@@ -92,10 +92,28 @@ function viewProviders() {
         onclick: () => startScrape([]),
         disabled: anyRunning ? "" : null,
       }, anyRunning ? "scraping…" : "Scrape all enabled"),
+      el("button", { class: "btn", onclick: findDomains }, "Find current domains"),
       el("button", { class: "btn", onclick: refresh }, "Refresh"),
     ),
     el("div", { class: "grid" }, state.providers.map(providerCard)),
   );
+}
+
+async function findDomains(e) {
+  const btn = e.currentTarget;
+  btn.disabled = true;
+  btn.textContent = "probing mirrors…";
+  try {
+    const { results } = await api("/api/find-domains", { method: "POST", body: "{}" });
+    const bad = Object.entries(results).filter(([, r]) => !r.ok).map(([id, r]) => `${id}: ${r.detail}`);
+    banner(bad.length ? `No live mirror found for ${bad.join("; ")}` : null);
+    await refresh();
+  } catch (err) {
+    banner(err.message);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "Find current domains";
+  }
 }
 
 function providerCard(p) {

@@ -1,0 +1,62 @@
+{
+  "_comment": "Mirror-domain rules for find_domains.py. `n` / `host` are the last known good values and are rewritten by --write. `urls` are the provider env vars, filled from the winning host ({n} for numbered mirrors, {host} for redirect/fixed ones). `expect` is a word the real site's HTML contains, so parked pages and ISP block pages don't count as alive.",
+  "books": {
+    "bson": {
+      "strategy": "numbered",
+      "probe": "https://www.{n}bets10.com/",
+      "n": 10012,
+      "back": 3,
+      "ahead": 80,
+      "expect": "bets10",
+      "urls": {
+        "BSON_BASE": "https://www.{n}bets10.com/en/sportsbook/football",
+        "BSON_API_ORIGIN": "https://www.{n}bets10.com"
+      }
+    },
+    "betsolutions": {
+      "strategy": "numbered",
+      "probe": "https://dumanbet{n}.com/",
+      "n": 920,
+      "back": 3,
+      "ahead": 60,
+      "expect": "dumanbet",
+      "urls": {
+        "BETSOLUTIONS_URL": "https://dumanbet{n}.com/tr/Sports/BSBetting?type=sport",
+        "BETSOLUTIONS_ORIGIN": "https://sports.dumanbet{n}.com"
+      }
+    },
+    "exonbet": {
+      "strategy": "numbered",
+      "probe": "https://exonbet{n}.com/",
+      "n": 264,
+      "back": 3,
+      "ahead": 40,
+      "expect": "exonbet",
+      "urls": {
+        "EXONBET_LIST_URL": "https://exonbet{n}.com/en/sport/pre-match/?sport=1&champ=52530"
+      }
+    },
+    "bwin": {
+      "strategy": "redirect",
+      "_note": "Betwinner mirrors use random numbers and TLDs, so they can't be counted up. Follow the brand's own redirectors instead; add any link you trust (e.g. from their Telegram) to `entries`.",
+      "entries": [
+        "https://betwinner.com/",
+        "https://betwinner-52364.pro/"
+      ],
+      "host": "betwinner-52364.pro",
+      "expect": "betwinner",
+      "urls": {
+        "BWIN_BASE": "https://{host}"
+      }
+    },
+    "rainbet": {
+      "strategy": "fixed",
+      "host": "rainbet.com",
+      "expect": "rainbet",
+      "urls": {
+        "RAINBET_BASE": "https://{host}/sportsbook",
+        "RAINBET_API": "https://api-a-c7818b61-600.sptpub.com"
+      }
+    }
+  }
+}

@@ -17,7 +17,11 @@ match from several bookmakers and comparing over/under lines.
 | `render.yaml` | Render Blueprint for `hosted/` |
 | `console/` | Local web control panel — run scrapers, edit mirror URLs, browse matches and arbs |
 | `<book>-scraper/` | One scraper per bookmaker (Playwright / patchright) |
-| `json-2file-arbfinder/arb_finder.py` | Pairs the scraped files by match and computes the arbs |
+| `json-2file-arbfinder/arb_finder.py` | Groups the scraped files from any number of books by match and computes the arbs |
+| `json-2file-arbfinder/books.py` | Book registry + format adapters; documents the canonical format new scrapers should write |
+| `domains/` | `find_domains.py` finds each book's current mirror and saves it (rules in `domains.json`) |
+| `runner/run.py` | Always-on loop: domains → scrape → arbs → phone alerts. See `deploy/README.md` |
+| `Dockerfile`, `docker-compose.yml` | Run runner + web app on any server |
 | `json-2file-arbfinder/push_to_hosted.py` | Uploads the scrapers' arbs to the hosted app |
 
 ## Running it
@@ -41,10 +45,26 @@ cd bwin-scraper && python3 -m venv myenv
 See `console/README.md` for how the console, the two-phase league/match picker,
 and the Claude-powered doctor and implementer agents work.
 
+## Adding a website
+
+1. Console → **Add book** (or copy `k9win-scraper/`). The scraper writes
+   `<home>_-_<away>_odds_<book>.json` in the canonical format shown in
+   `json-2file-arbfinder/books.py` (or copies an existing book's format).
+2. If its domain rotates, add a rule to `domains/domains.json`.
+
+That's all: the arb finder, the runner and the console pick it up automatically.
+
+## Running it 24/7
+
+`docker compose up -d` on any small Linux server. See `deploy/README.md` for which
+server (Oracle Always Free works) and how to move it.
+
 ## Notes
 
-- Bookmaker mirror domains change often. When a book returns nothing, update its
-  URL in the console — no code change needed.
+- Bookmaker mirror domains change often. `python3 domains/find_domains.py --write`
+  (or **Find current domains** in the console) finds the newest live mirror and saves it;
+  the runner does this on its own every few cycles and whenever a book comes back empty.
+  Run it from the machine that scrapes: a mirror blocked by your ISP can be fine from a server.
 - Scraped odds JSON is not versioned; regenerate it with the console.
 - Arbitrage windows close fast, and stale odds are worse than no odds. The
   console defaults to showing only data scraped today.

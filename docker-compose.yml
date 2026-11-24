@@ -1,0 +1,30 @@
+# Runs the whole thing on one server. Moving servers = copy this repo + .env + data/,
+# then `docker compose up -d --build`. See deploy/README.md.
+services:
+  runner:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      RUNNER_PYTHON: python3          # one interpreter for every book inside the image
+      DATA_DIR: /app/data
+      ARB_FINDER_URL: ${ARB_FINDER_URL:-http://hosted:10000}
+      ARB_FINDER_UPLOAD_KEY: ${UPLOAD_KEY}
+    volumes:
+      - .:/app                        # code + console/providers.json + domains/domains.json
+    shm_size: 1gb                     # Chromium crashes with Docker's 64 MB default
+    logging: { options: { max-size: "10m", max-file: "3" } }
+
+  hosted:                             # the phone web app; replaces Render (never sleeps here)
+    image: node:22-alpine
+    restart: unless-stopped
+    working_dir: /app/hosted
+    command: node server.mjs
+    env_file: .env
+    environment:
+      PORT: 10000
+    volumes:
+      - .:/app:ro
+    ports:
+      - "10000:10000"
+    logging: { options: { max-size: "10m", max-file: "3" } }
