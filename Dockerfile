@@ -3,7 +3,8 @@
 # Code is bind-mounted by docker-compose.yml, so `git pull` + restart updates it.
 FROM mcr.microsoft.com/playwright/python:v1.49.1-noble
 
-ENV PYTHONUNBUFFERED=1 DEBIAN_FRONTEND=noninteractive DISPLAY=:99
+ENV PYTHONUNBUFFERED=1 DEBIAN_FRONTEND=noninteractive DISPLAY=:99 \
+    PIP_BREAK_SYSTEM_PACKAGES=1
 RUN apt-get update && apt-get install -y --no-install-recommends xvfb tini \
     && rm -rf /var/lib/apt/lists/*
 
